@@ -39,7 +39,17 @@ Important points to remember:
   
   4. Two programms have to be made for sorting and checking: checker and push_swap
   
-  5. Checker program:
+  # Checker program:
+  
+  
     - gets a list of integers as an argument, the first argument should be at the top of the stack.
-    - 
+    - array of strings should be convert to list of ints. lst_pushback should be used so the first string should appear at the begining of the list.
+    - than Checker waits and reads instructions on the standart input 
+    - if no arguments is given, checker stops and displays nothing. 
+    - In case of error, checker must display Error followed by a ’\n’ on the STANDART ERROR.
+      ERRORS include for example: 
+      - some arguments are not integers, 
+      - some arguments are bigger than an integer, 
+      - there are duplicates, 
+      - an instruction don’t exist and/or is incorrectly formatted.
 
