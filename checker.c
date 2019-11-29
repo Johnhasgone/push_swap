@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int 	int_check(char *str)
+int			int_check(char *str)
 {
 	while (*str)
 	{
@@ -24,7 +24,7 @@ int 	int_check(char *str)
 	return (1);
 }
 
-int		array_to_list(int argc, char **argv, t_list **list)
+int			array_to_list(int argc, char **argv, t_list **list)
 {
 	int i;
 	int	num;
@@ -45,26 +45,26 @@ int		array_to_list(int argc, char **argv, t_list **list)
 	return (1);
 }
 
-void	read_instructions(t_list **lst_instr)
+void		read_instructions(t_list **lst_instr)
 {
-	char 	*line;
-	int 	res = 1;
+	char	*line;
 
 	line = NULL;
-	while (res > 0)
+	while (get_next_line(0, &line) > 0)
 	{
-		res = get_next_line(0, &line);
 		ft_lstaddend(lst_instr, ft_lstnew(line, ft_strlen(line) + 1));
 		ft_strdel(&line);
 	}
 }
 
-/*void	sort_list(t_list **lst_a, t_list **lst_b, t_list *lst_instr)
+/*
+void		sort_list(t_list **lst_a, t_list **lst_b, t_list *lst_instr)
 {
 
-}*/
+}
+*/
 
-int 		main(int argc, char **argv)
+int			main(int argc, char **argv)
 {
 	t_list	*lst_a;
 	t_list	*lst_b;
@@ -90,5 +90,4 @@ int 		main(int argc, char **argv)
 	}
 	write(1, "fin\n", 4);
 	return (0);
-
 }
