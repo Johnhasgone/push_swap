@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>

@@ -12,6 +12,7 @@
 
 #ifndef FT_LIBFT_H
 # define FT_LIBFT_H
+# define BUFF_SIZE 1
 
 # include <string.h>
 # include <unistd.h>
@@ -23,6 +24,13 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_lst
+{
+	char			*str;
+	int				fdesc;
+	struct s_lst	*next;
+}					t_lst;
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);

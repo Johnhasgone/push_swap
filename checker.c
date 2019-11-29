@@ -88,6 +88,5 @@ int			main(int argc, char **argv)
 		write(1, "\n", 1);
 		lst_instr = lst_instr->next;
 	}
-	write(1, "fin\n", 4);
 	return (0);
 }

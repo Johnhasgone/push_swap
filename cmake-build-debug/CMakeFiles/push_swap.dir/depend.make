@@ -3,10 +3,5 @@
 
 CMakeFiles/push_swap.dir/checker.c.o: .././libft/libft.h
 CMakeFiles/push_swap.dir/checker.c.o: ../checker.c
-CMakeFiles/push_swap.dir/checker.c.o: ../libft/ft_lstaddend.c
-CMakeFiles/push_swap.dir/checker.c.o: ../libft/ft_lstnew.c
-CMakeFiles/push_swap.dir/checker.c.o: ../libft/get_next_line.c
-CMakeFiles/push_swap.dir/checker.c.o: ../libft/get_next_line.h
-CMakeFiles/push_swap.dir/checker.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/checker.c.o: ../push_swap.h
 
