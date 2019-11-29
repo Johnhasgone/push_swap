@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nslughor <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 14:28:10 by nslughor          #+#    #+#             */
-/*   Updated: 2019/10/23 13:01:54 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/05 12:02:48 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/12 12:54:22 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ void	ft_putstr(char const *s)
 {
 	int	i;
 
+	if (s == NULL)
+		return ;
 	i = 0;
-	if (s)
+	while (s[i])
 	{
-		i = ft_strlen(s);
-		write(1, s, i);
+		ft_putchar(s[i]);
+		i++;
 	}
 }

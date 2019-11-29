@@ -3,31 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nslughor <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 14:26:16 by nslughor          #+#    #+#             */
-/*   Updated: 2019/10/23 13:01:55 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/09 10:41:39 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/09 12:21:26 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-void	*ft_memccpy(void *dst, const void *src, int c, size_t cnt)
+void				*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	size_t			i;
-	unsigned char	*src1;
-	unsigned char	*dst1;
+	unsigned char	*dst_cast;
+	unsigned char	*src_cast;
 
-	src1 = (unsigned char*)src;
-	dst1 = (unsigned char*)dst;
-	if (!src1 && !dst1)
-		return (NULL);
+	c = (unsigned char)c;
 	i = 0;
-	while (i < cnt)
+	dst_cast = (unsigned char*)dst;
+	src_cast = (unsigned char*)src;
+	while (i < n)
 	{
-		dst1[i] = src1[i];
-		if (src1[i] == (unsigned char)c)
-			return (dst1 + i + 1);
+		dst_cast[i] = src_cast[i];
+		if (dst_cast[i] == c)
+			return (&dst_cast[i + 1]);
 		i++;
 	}
 	return (NULL);

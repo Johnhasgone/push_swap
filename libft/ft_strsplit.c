@@ -3,89 +3,99 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nslughor <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 14:31:31 by nslughor          #+#    #+#             */
-/*   Updated: 2019/10/23 13:01:55 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/10 15:10:07 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/12 13:26:40 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-static int	ft_nword(char const *s, char c)
+static int		ft_countrows(char const *s, char c)
 {
-	int	i;
-	int n;
+	int			i;
+	int			rows;
 
 	i = 0;
-	n = 0;
+	rows = 0;
 	if (!s)
 		return (0);
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		while (s[i] == c)
 			i++;
-		if (s[i] && s[i] != c)
-			n++;
-		while (s[i] && s[i] != c)
+		if (s[i] != c && s[i] != '\0')
+			rows++;
+		while (s[i] != c && s[i] != '\0')
 			i++;
 	}
-	return (n);
+	return (rows);
 }
 
-static int	ft_lenword(char const *s, char c)
+static char		**ft_delmap(char **str, int i)
 {
-	int i;
-	int len;
+	while (i >= 0)
+	{
+		free(str[i]);
+		str[i] = NULL;
+		i--;
+	}
+	free(str);
+	str = NULL;
+	return (str);
+}
+
+static char		**ft_emptymap(char const *s, char c)
+{
+	int			i;
+	int			j;
+	int			rows;
+	int			columns;
+	char		**map;
 
 	i = 0;
-	len = 0;
-	while (s[i] == c)
-		i++;
-	while (s[i] && s[i] != c)
+	j = 0;
+	rows = ft_countrows(s, c);
+	if (!(map = (char**)malloc(sizeof(char*) * (rows + 1))))
+		return (NULL);
+	while (s[i] != '\0' && j < rows)
 	{
-		len++;
-		i++;
+		columns = 0;
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		while (s[i] != c && s[i++] != '\0')
+			columns++;
+		if (!(map[j++] = (char*)malloc(sizeof(char) * (columns + 1))))
+			return (ft_delmap(map, j - 2));
 	}
-	return (len);
+	map[j] = NULL;
+	return (map);
 }
 
-static char	**ft_delstrsplit(char ***buf, int i)
+char			**ft_strsplit(char const *s, char c)
 {
-	while (i--)
-	{
-		free(*buf[i]);
-		*buf[i] = NULL;
-	}
-	free(*buf);
-	*buf = NULL;
-	return (NULL);
-}
+	char		**map;
+	int			i;
+	int			j;
+	int			k;
+	int			rows;
 
-char		**ft_strsplit(char const *s, char c)
-{
-	char	**buf;
-	int		i;
-	int		j;
-	int		k;
-
-	if (!s)
+	if (s == NULL)
 		return (NULL);
-	if (!(buf = (char**)malloc(sizeof(char*) * (ft_nword(s, c) + 1))))
-		return (NULL);
-	i = -1;
+	i = 0;
 	k = 0;
-	while (++i < ft_nword(s, c))
+	rows = ft_countrows(s, c);
+	if (!(map = ft_emptymap(s, c)))
+		return (NULL);
+	while (s[k] != '\0' && i < rows)
 	{
 		j = 0;
-		if (!(buf[i] = ft_strnew(ft_lenword(s + k, c) + 1)))
-			return (ft_delstrsplit(&buf, i));
-		while (s[k] == c)
+		while (s[k] == c && s[k] != '\0')
 			k++;
-		while (s[k] && s[k] != c)
-			buf[i][j++] = s[k++];
-		buf[i][j] = '\0';
+		while (s[k] != c && s[k] != '\0')
+			map[i][j++] = s[k++];
+		map[i++][j] = '\0';
 	}
-	buf[i] = NULL;
-	return (buf);
+	return (map);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nslughor <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 14:28:40 by nslughor          #+#    #+#             */
-/*   Updated: 2019/10/23 13:01:54 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/07 23:55:14 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/07 23:58:56 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 void	ft_strclr(char *s)
 {
-	int	len;
-
-	len = 0;
-	if (s)
-		len = ft_strlen(s);
-	if (len)
-		ft_bzero((void*)s, len);
+	if (s != NULL)
+		ft_memset((void *)s, 0, ft_strlen(s));
 }

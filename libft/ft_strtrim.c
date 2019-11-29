@@ -3,39 +3,60 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nslughor <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 14:31:53 by nslughor          #+#    #+#             */
-/*   Updated: 2019/10/23 13:01:55 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/10 11:47:52 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/10 14:07:36 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strtrim(char const *s)
+static int	count_of_spaces(char const *s)
 {
-	char	*dst;
-	int		beginlen;
-	int		endlen;
-	int		len;
+	int		count;
+	int		end;
 
-	if (!s)
+	count = 0;
+	while (s[count] == ' ' || s[count] == '\t' || s[count] == '\n')
+		count++;
+	if (s[count] == '\0')
+		return (count);
+	end = ft_strlen(s) - 1;
+	while (s[end] == ' ' || s[end] == '\t' || s[end] == '\n')
+	{
+		end--;
+		count++;
+	}
+	return (count);
+}
+
+char		*ft_strtrim(char const *s)
+{
+	int		i;
+	int		j;
+	int		len;
+	char	*new_str;
+
+	if (s == NULL)
 		return (NULL);
-	beginlen = 0;
-	while (s[beginlen] == ' ' || s[beginlen] == '\t' || s[beginlen] == '\n')
-		beginlen++;
-	len = ft_strlen(s);
-	endlen = 0;
-	while (s[len - endlen - 1] == ' '
-			|| s[len - 1 - endlen] == '\t' || s[len - endlen - 1] == '\n')
-		endlen++;
-	len = len - beginlen - endlen;
-	if (len <= 0)
-		len = 0;
-	dst = (char*)malloc(sizeof(char) * (len + 1));
-	if (!dst)
+	i = 0;
+	j = 0;
+	len = ft_strlen(s) - count_of_spaces(s);
+	if ((new_str = (char*)malloc(sizeof(char) * (len + 1))))
+	{
+		while (s[j] == ' ' || s[j] == '\n' || s[j] == '\t')
+			j++;
+		while (i < len)
+		{
+			new_str[i] = s[j];
+			i++;
+			j++;
+		}
+		new_str[i] = '\0';
+		return (new_str);
+	}
+	else
 		return (NULL);
-	ft_strncpy(dst, &(s[beginlen]), len);
-	dst[len] = '\0';
-	return (dst);
 }

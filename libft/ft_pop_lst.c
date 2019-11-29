@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_pop_lst.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hluthor <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/06 11:10:47 by cimogene          #+#    #+#             */
-/*   Updated: 2019/09/06 11:26:08 by cimogene         ###   ########.fr       */
+/*   Created: 2019/07/21 14:32:44 by hluthor           #+#    #+#             */
+/*   Updated: 2019/09/12 15:32:34 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+#include <stdlib.h>
+
+int	*ft_pop_lst(t_list **begin_list)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	else
-		return (0);
+	t_list	*new_elem;
+	int		*nb;
+
+	nb = (*begin_list)->content;
+	new_elem = (*begin_list)->next;
+	free(*begin_list);
+	*begin_list = new_elem;
+	return (nb);
 }

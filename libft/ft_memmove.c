@@ -3,34 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nslughor <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 14:27:03 by nslughor          #+#    #+#             */
-/*   Updated: 2019/10/23 13:01:55 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/07 19:15:15 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/09 17:54:00 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-void	*ft_memmove(void *dst, const void *src, size_t length)
+void					*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	char	*src1;
-	char	*dst1;
+	unsigned char		*dst_cast;
+	unsigned const char	*src_cast;
+	size_t				i;
 
-	src1 = (char*)src;
-	dst1 = (char*)dst;
-	if (!src1 && !dst1)
-		return (NULL);
+	dst_cast = dst;
+	src_cast = src;
 	i = 0;
-	if (src > dst)
-		while (i < length)
+	if (src_cast < dst_cast)
+	{
+		while (len > 0)
 		{
-			dst1[i] = src1[i];
+			dst_cast[len - 1] = src_cast[len - 1];
+			len--;
+		}
+	}
+	else if (src_cast > dst_cast)
+	{
+		while (i < len)
+		{
+			dst_cast[i] = src_cast[i];
 			i++;
 		}
-	else
-		while (length--)
-			dst1[length] = src1[length];
-	return (dst1);
+	}
+	return (dst);
 }

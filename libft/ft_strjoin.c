@@ -3,35 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nslughor <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 14:30:01 by nslughor          #+#    #+#             */
-/*   Updated: 2019/10/23 13:01:55 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/09 22:51:06 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/11 12:21:15 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
-	int		len1;
-	int		len2;
-	int		len;
-	char	*dst;
+	char	*new_str;
+	size_t	i;
+	size_t	j;
+	size_t	size1;
+	size_t	size2;
 
-	len1 = 0;
-	len2 = 0;
-	dst = NULL;
-	if (s1 && s2)
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+	i = 0;
+	j = 0;
+	size1 = ft_strlen_p(s1);
+	size2 = ft_strlen_p(s2);
+	new_str = (char*)malloc(sizeof(char) * (size1 + size2 + 1));
+	if (new_str)
 	{
-		len1 = ft_strlen(s1);
-		len2 = ft_strlen(s2);
-		len = len1 + len2;
-		if (!(dst = (char*)malloc(sizeof(char) * (len + 1))))
-			return (NULL);
-		ft_strcpy(dst, s1);
-		ft_strcat(dst, s2);
-		return (dst);
+		while (j < size1)
+			new_str[i++] = s1[j++];
+		j = 0;
+		while (j < size2)
+			new_str[i++] = s2[j++];
+		new_str[i] = '\0';
+		return (new_str);
 	}
-	return (NULL);
+	else
+		return (NULL);
 }

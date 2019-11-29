@@ -3,38 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nslughor <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 23:24:54 by nslughor          #+#    #+#             */
-/*   Updated: 2019/10/23 13:01:54 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/05 23:17:18 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/14 20:28:44 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *ptr)
+int				ft_atoi(const char *str)
 {
-	int				s;
-	long long int	sum;
-	int				i;
+	long long	res;
+	int			isneg;
+	int			i;
 
-	sum = 0;
-	s = 1;
+	res = 0;
+	isneg = 0;
 	i = 0;
-	while ((ptr[i] == '\n') || (ptr[i] == '\t') || (ptr[i] == '\v') ||
-	(ptr[i] == '\f') || (ptr[i] == '\r') || (ptr[i] == ' '))
+	while (str[i] == '\0' || str[i] == '\n' || str[i] == '\t' ||
+	str[i] == '\v' || str[i] == '\f' || str[i] == '\r' || str[i] == ' ')
 		i++;
-	if ((ptr[i] == '+') || (ptr[i] == '-'))
-		if (ptr[i++] == '-')
-			s = -1;
-	while ((ptr[i] >= '0') && (ptr[i] <= '9'))
+	if (str[i] == '-')
+		isneg = -1;
+	if ((str[i] == '-') || (str[i] == '+'))
+		i++;
+	while ((str[i] >= '0') && (str[i] <= '9'))
 	{
-		sum = sum * 10 + (ptr[i] - '0');
-		if (sum < 0 && s == -1)
+		res = res * 10 + (str[i++] - '0');
+		if (res < 0 && isneg == -1)
 			return (0);
-		if (sum < 0 && s == 1)
+		if (res < 0 && isneg != -1)
 			return (-1);
-		i++;
 	}
-	return ((int)(s * sum));
+	if (isneg == -1)
+		return (-(int)res);
+	return ((int)res);
 }

@@ -11,9 +11,6 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include "libft/get_next_line.c"
-#include "libft/ft_lstaddend.c"
-#include "libft/ft_lstnew.c"
 
 int 	int_check(char *str)
 {
@@ -41,7 +38,7 @@ int		array_to_list(int argc, char **argv, t_list **list)
 		{
 			num = (int)malloc(sizeof(int));
 			num = ft_atoi(argv[i]);
-			ft_lstaddend(list, ft_lstnew((int*)&num, 1));
+			ft_lstaddend(list, ft_lstnew(&num, 1));
 			i++;
 		}
 	}
@@ -58,8 +55,7 @@ void	read_instructions(t_list **lst_instr)
 	{
 		res = get_next_line(0, &line);
 		ft_lstaddend(lst_instr, ft_lstnew(line, ft_strlen(line) + 1));
-		free(line);
-		line = NULL;
+		ft_strdel(&line);
 	}
 }
 
@@ -94,4 +90,5 @@ int 		main(int argc, char **argv)
 	}
 	write(1, "fin\n", 4);
 	return (0);
+
 }

@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nslughor <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/05 14:31:23 by nslughor          #+#    #+#             */
-/*   Updated: 2019/10/23 13:01:55 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/06 13:28:29 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/06 13:42:39 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 		i++;
-	while (i > -1)
+	while (i >= 0)
 	{
 		if (s[i] == c)
-			return ((char*)(s + i));
+			return ((char *)(&s[i]));
 		else
 			i--;
 	}
