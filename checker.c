@@ -15,13 +15,18 @@
 
 int			int_check(char *str)
 {
-	while (*str)
+	int i;
+
+	i = 0;
+	while (str[i])
 	{
-		if (*str >= '0' && *str <= '9')
-			str++;
+		if (str[i] >= '0' && str[i] <= '9')
+			i++;
 		else
 			return (0);
 	}
+	if (ft_atoi(str) % (10 ^ (i - 1)) != str[i - 1] - '0')
+		return (0);
 	return (1);
 }
 
