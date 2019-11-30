@@ -3,7 +3,7 @@ project(push_swap)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(push_swap checker.c push_swap.h)
+add_executable(push_swap checker.c push_swap.h instructions.c)
 
 find_library(FT ft libft)
 target_link_libraries(push_swap LINK_PUBLIC ${FT})

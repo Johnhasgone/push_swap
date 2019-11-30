@@ -25,7 +25,8 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 		ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
 		ft_lstmap.c \
-		ft_lstaddend.c ft_strlen_p.c ft_count_if.c ft_free_lst.c ft_pop_lst.c \
+		ft_lstpop_end.c ft_lstadd_end.c ft_strlen_p.c ft_count_if.c ft_free_lst.c \
+		ft_lstpop.c \
 		ft_iswhitespace.c get_next_line.c
 
 OBJ = $(subst .c,.o,$(SRC))

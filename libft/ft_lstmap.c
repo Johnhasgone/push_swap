@@ -44,7 +44,7 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		if (!(new_lst = (t_list*)malloc(sizeof(t_list))))
 			return (ft_delmap(start));
 		*new_lst = *(f(lst));
-		ft_lstaddend(&start, new_lst);
+		ft_lstadd_end(&start, new_lst);
 		lst = lst->next;
 	}
 	return (start);

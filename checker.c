@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
 int			int_check(char *str)
 {
@@ -38,55 +39,94 @@ int			array_to_list(int argc, char **argv, t_list **list)
 		{
 			num = (int)malloc(sizeof(int));
 			num = ft_atoi(argv[i]);
-			ft_lstaddend(list, ft_lstnew(&num, 1));
+			ft_lstadd_end(list, ft_lstnew(&num, 1));
 			i++;
 		}
 	}
 	return (1);
 }
 
-void		read_instructions(t_list **lst_instr)
+void		sort_list(t_list **list_a, t_list **list_b, char *line)
+{
+	if (ft_strcmp(line, "sa") == 0)
+		list_swap(list_a);
+	else if (ft_strcmp(line, "sb") == 0)
+		list_swap(list_b);
+	else if (ft_strcmp(line, "ss") == 0)
+		list_swap_ab(list_a, list_b);
+	else if (ft_strcmp(line, "pa") == 0)
+		list_push(list_a, list_b);
+	else if (ft_strcmp(line, "pb") == 0)
+		list_push(list_b, list_a);
+	else if (ft_strcmp(line, "ra") == 0)
+		list_rotate(list_a);
+	else if (ft_strcmp(line, "rb") == 0)
+		list_rotate(list_b);
+	else if (ft_strcmp(line, "rr") == 0)
+		list_rotate_ab(list_a, list_b);
+	else if (ft_strcmp(line, "rra") == 0)
+		list_reverse_rotate(list_a);
+	else if (ft_strcmp(line, "rrb") == 0)
+		list_reverse_rotate(list_b);
+	else if (ft_strcmp(line, "rrr") == 0)
+		list_reverse_rotate_ab(list_a, list_b);
+}
+
+void read_instructions(t_list **list_a, t_list **list_b)
 {
 	char	*line;
 
 	line = NULL;
 	while (get_next_line(0, &line) > 0)
 	{
-		ft_lstaddend(lst_instr, ft_lstnew(line, ft_strlen(line) + 1));
+		sort_list(list_a, list_b, line);
+		//ft_lstadd_end(list_a, ft_lstnew(line, ft_strlen(line) + 1));
 		ft_strdel(&line);
 	}
 }
 
-/*
-void		sort_list(t_list **lst_a, t_list **lst_b, t_list *lst_instr)
-{
-
-}
-*/
-
 int			main(int argc, char **argv)
 {
-	t_list	*lst_a;
-	t_list	*lst_b;
-	t_list	*lst_instr;
+	t_list	*list_a;
+	t_list	*list_b;
 
-	lst_a = NULL;
-	lst_b = NULL;
-	lst_instr = NULL;
+	list_a = NULL;
+	list_b = NULL;
 	if (argc < 2)
 		return (0);
-	if (array_to_list(argc, argv, &lst_a) == 0)
+	if (array_to_list(argc, argv, &list_a) == 0)
+	{
 		write(2, "Error\n", 6);
+		return (0);
+	}
 	else
 	{
-		read_instructions(&lst_instr);
-		//sort_list(&lst_a, &lst_b, lst_instr);
+		read_instructions(&list_a, &list_b);
 	}
-	while (lst_instr)
+	/*
+	while (list_a)
 	{
-		ft_putstr((char*)lst_instr->content);
-		write(1, "\n", 1);
-		lst_instr = lst_instr->next;
+		printf("%d    ", *(int*)list_a->content);
+		if (list_b)
+		{
+			printf("%d", *(int*)list_b->content);
+			list_b = list_b->next;
+		}
+		printf("\n");
+		list_a = list_a->next;
 	}
+	printf("A    B");
+	 */
+	while (list_a->next)
+	{
+		if (*(int*)list_a->content < *(int*)list_a->next->content)
+			list_a = list_a->next;
+		else
+			break ;
+	}
+	if (!list_a->next && !list_b)
+		write(1, "OK\n", 3);
+	else
+		write(1, "KO\n", 3);
 	return (0);
 }

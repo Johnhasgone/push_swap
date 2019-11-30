@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/checker.c.o"
-  "push_swap.pdb"
+  "CMakeFiles/push_swap.dir/instructions.c.o"
   "push_swap"
+  "push_swap.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pop_lst.c                                       :+:      :+:    :+:   */
+/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hluthor <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/21 14:32:44 by hluthor           #+#    #+#             */
-/*   Updated: 2019/09/12 15:32:34 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/11 20:26:49 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/11 20:55:02 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-int	*ft_pop_lst(t_list **begin_list)
+void	ft_lstadd_end(t_list **alst, t_list *new)
 {
-	t_list	*new_elem;
-	int		*nb;
+	t_list	*elem;
 
-	nb = (*begin_list)->content;
-	new_elem = (*begin_list)->next;
-	free(*begin_list);
-	*begin_list = new_elem;
-	return (nb);
+	if (new == NULL)
+		return ;
+	elem = *alst;
+	if (elem == NULL)
+	{
+		*alst = new;
+	}
+	else
+	{
+		while (elem->next)
+			elem = elem->next;
+		elem->next = new;
+	}
 }

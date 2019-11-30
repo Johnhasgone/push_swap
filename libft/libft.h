@@ -88,10 +88,11 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
 size_t				ft_strlen_p(const char *s);
-void				ft_lstaddend(t_list **alst, t_list *new);
+void				ft_lstadd_end(t_list **alst, t_list *new);
 int					ft_count_if(char **tab, int (*f)(char*));
 t_list				*ft_free_lst(t_list *lst);
-int					*ft_pop_lst(t_list **begin_list);
+t_list				*ft_lstpop(t_list **begin_list);
+t_list				*ft_lstpop_end(t_list **begin_list);
 int					ft_iswhitespase(char c);
 
 t_list				*ft_lstnew(void const *content, size_t content_size);
