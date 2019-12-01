@@ -5,14 +5,16 @@
 
 void list_swap(t_list **list)
 {
-	t_list	*first;
+	t_list	*third;
+	t_list	*second;
 
 	if ((!*list) || !(*list)->next)
 		return ;
-	first = (*list)->next;
-	(*list)->next = (*list)->next->next;
-	first->next = *list;
-	*list = first;
+	third = (*list)->next->next;
+	second = (*list)->next;
+	second->next = *list;
+	second->next->next = third;
+	*list = second;
 }
 
 void list_swap_ab(t_list **list_a, t_list **list_b)

@@ -86,6 +86,12 @@
 		<Unit filename="/Users/euvaganov/42/push_swap/instructions.c">
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/euvaganov/42/push_swap/libft/ft_lstadd_end.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/euvaganov/42/push_swap/push_swap.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/euvaganov/42/push_swap/push_swap.h">
 			<Option target="push_swap"/>
 		</Unit>

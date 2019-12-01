@@ -30,3 +30,27 @@ void	ft_lstadd_end(t_list **alst, t_list *new)
 		elem->next = new;
 	}
 }
+
+int	ft_lst_check_add_end(t_list **alst, t_list *new)
+{
+	t_list	*elem;
+
+	if (new == NULL)
+		return (0);
+	elem = *alst;
+	if (elem == NULL)
+	{
+		*alst = new;
+	}
+	else
+	{
+		while (elem->next)
+		{
+			if (*(int*)elem->content == *(int*)new->content)
+				return (0);
+			elem = elem->next;
+		}
+		elem->next = new;
+	}
+	return (1);
+}

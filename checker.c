@@ -25,7 +25,7 @@ int			int_check(char *str)
 		else
 			return (0);
 	}
-	if (ft_atoi(str) % (10 ^ (i - 1)) != str[i - 1] - '0')
+	if (ft_atoi(str) % 10 != str[i - 1] - '0')
 		return (0);
 	return (1);
 }
@@ -44,14 +44,15 @@ int			array_to_list(int argc, char **argv, t_list **list)
 		{
 			num = (int)malloc(sizeof(int));
 			num = ft_atoi(argv[i]);
-			ft_lstadd_end(list, ft_lstnew(&num, 1));
+			if (!(ft_lst_check_add_end(list, ft_lstnew(&num, 1))))
+				return (0);
 			i++;
 		}
 	}
 	return (1);
 }
 
-void		sort_list(t_list **list_a, t_list **list_b, char *line)
+int sort_list(t_list **list_a, t_list **list_b, char *line)
 {
 	if (ft_strcmp(line, "sa") == 0)
 		list_swap(list_a);
@@ -75,63 +76,60 @@ void		sort_list(t_list **list_a, t_list **list_b, char *line)
 		list_reverse_rotate(list_b);
 	else if (ft_strcmp(line, "rrr") == 0)
 		list_reverse_rotate_ab(list_a, list_b);
+	else
+		return (0);
+	return (1);
 }
 
-void read_instructions(t_list **list_a, t_list **list_b)
+int read_instructions(t_list **list_a, t_list **list_b)
 {
 	char	*line;
 
 	line = NULL;
 	while (get_next_line(0, &line) > 0)
 	{
-		sort_list(list_a, list_b, line);
-		//ft_lstadd_end(list_a, ft_lstnew(line, ft_strlen(line) + 1));
+		if (!(sort_list(list_a, list_b, line)))
+		{
+			ft_strdel(&line);
+			return (0);
+		}
 		ft_strdel(&line);
 	}
+	return (1);
 }
 
-int			main(int argc, char **argv)
-{
-	t_list	*list_a;
-	t_list	*list_b;
-
-	list_a = NULL;
-	list_b = NULL;
-	if (argc < 2)
-		return (0);
-	if (array_to_list(argc, argv, &list_a) == 0)
-	{
-		write(2, "Error\n", 6);
-		return (0);
-	}
-	else
-	{
-		read_instructions(&list_a, &list_b);
-	}
-	/*
-	while (list_a)
-	{
-		printf("%d    ", *(int*)list_a->content);
-		if (list_b)
-		{
-			printf("%d", *(int*)list_b->content);
-			list_b = list_b->next;
-		}
-		printf("\n");
-		list_a = list_a->next;
-	}
-	printf("A    B");
-	 */
-	while (list_a->next)
-	{
-		if (*(int*)list_a->content < *(int*)list_a->next->content)
-			list_a = list_a->next;
-		else
-			break ;
-	}
-	if (!list_a->next && !list_b)
-		write(1, "OK\n", 3);
-	else
-		write(1, "KO\n", 3);
-	return (0);
-}
+//int			main(int argc, char **argv)
+//{
+//	t_list	*list_a;
+//	t_list	*list_b;
+//
+//	list_a = NULL;
+//	list_b = NULL;
+//	if (argc < 2)
+//		return (0);
+//	if (array_to_list(argc, argv, &list_a) == 0 ||
+//	read_instructions(&list_a, &list_b) == 0)
+//	{
+//		write(2, "Error\n", 6);
+//		return (0);
+//	}
+//	/*
+//	while (list_a)
+//	{
+//		printf("%d    ", *(int*)list_a->content);
+//		if (list_b)
+//		{
+//			printf("%d", *(int*)list_b->content);
+//			list_b = list_b->next;
+//		}
+//		printf("\n");
+//		list_a = list_a->next;
+//	}
+//	printf("A    B");
+//	 */
+//	if (sort_check(list_a) && !list_b)
+//		write(1, "OK\n", 3);
+//	else
+//		write(1, "KO\n", 3);
+//	return (0);
+//}

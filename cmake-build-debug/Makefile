@@ -177,6 +177,60 @@ instructions.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/instructions.c.s
 .PHONY : instructions.c.s
 
+libft/ft_lstadd_end.o: libft/ft_lstadd_end.c.o
+
+.PHONY : libft/ft_lstadd_end.o
+
+# target to build an object file
+libft/ft_lstadd_end.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/ft_lstadd_end.c.o
+.PHONY : libft/ft_lstadd_end.c.o
+
+libft/ft_lstadd_end.i: libft/ft_lstadd_end.c.i
+
+.PHONY : libft/ft_lstadd_end.i
+
+# target to preprocess a source file
+libft/ft_lstadd_end.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/ft_lstadd_end.c.i
+.PHONY : libft/ft_lstadd_end.c.i
+
+libft/ft_lstadd_end.s: libft/ft_lstadd_end.c.s
+
+.PHONY : libft/ft_lstadd_end.s
+
+# target to generate assembly for a file
+libft/ft_lstadd_end.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/ft_lstadd_end.c.s
+.PHONY : libft/ft_lstadd_end.c.s
+
+push_swap.o: push_swap.c.o
+
+.PHONY : push_swap.o
+
+# target to build an object file
+push_swap.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.o
+.PHONY : push_swap.c.o
+
+push_swap.i: push_swap.c.i
+
+.PHONY : push_swap.i
+
+# target to preprocess a source file
+push_swap.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.i
+.PHONY : push_swap.c.i
+
+push_swap.s: push_swap.c.s
+
+.PHONY : push_swap.s
+
+# target to generate assembly for a file
+push_swap.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.s
+.PHONY : push_swap.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +246,12 @@ help:
 	@echo "... instructions.o"
 	@echo "... instructions.i"
 	@echo "... instructions.s"
+	@echo "... libft/ft_lstadd_end.o"
+	@echo "... libft/ft_lstadd_end.i"
+	@echo "... libft/ft_lstadd_end.s"
+	@echo "... push_swap.o"
+	@echo "... push_swap.i"
+	@echo "... push_swap.s"
 .PHONY : help
 
 

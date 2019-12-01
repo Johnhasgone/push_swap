@@ -21,5 +21,6 @@ t_list	*ft_lstpop(t_list **begin_list)
 		return (NULL);
 	new_elem = *begin_list;
 	*begin_list = (*begin_list)->next;
+	new_elem->next = NULL;
 	return (new_elem);
 }
