@@ -1,19 +1,25 @@
-//
-// Created by Евгений Ваганов on 01.12.2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/01 16:38:54 by cimogene          #+#    #+#             */
+/*   Updated: 2019/12/01 16:39:11 by cimogene         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
-#include <stdbool.h>
 
-int last_number(t_list *list)
+int			last_number(t_list *list)
 {
 	while (list->next)
 		list = list->next;
 	return (*(int*)list->content);
 }
 
-void min_num_up(t_list **list_a, t_list **list_b)
+void		push_swap_a(t_list **list_a, t_list **list_b)
 {
 	int		last_num_a;
 
@@ -37,9 +43,9 @@ void min_num_up(t_list **list_a, t_list **list_b)
 	}
 }
 
-void max_num_up(t_list **list_b, t_list **list_a)
+void		push_swap_b(t_list **list_b, t_list **list_a)
 {
-	int last_num_b;
+	int		last_num_b;
 
 	last_num_b = last_number(*list_b);
 	if ((*list_b)->next && LIST_B->content < LIST_B->next->content &&
@@ -62,13 +68,7 @@ void max_num_up(t_list **list_b, t_list **list_a)
 	}
 }
 
-void push_swap(t_list **list_a, t_list **list_b)
-{
-	min_num_up(list_a, list_b);
-	max_num_up(list_b, list_a);
-}
-
-int sort_check(t_list *list_a)
+int			sort_check(t_list *list_a)
 {
 	while (list_a->next)
 	{
@@ -79,27 +79,5 @@ int sort_check(t_list *list_a)
 	}
 	if (!list_a->next)
 		return (1);
-	return (0);
-}
-
-int main(int argc, char **argv)
-{
-	t_list	*list_a;
-	t_list	*list_b;
-
-	list_a = NULL;
-	list_b = NULL;
-	if (argc < 2)
-		return (0);
-	if (array_to_list(argc, argv, &list_a) == 0)
-	{
-		write(2, "Error\n", 6);
-		return (0);
-	}
-	else
-	{
-		while (!sort_check(list_a) || list_b)
-			push_swap(&list_a, &list_b);
-	}
 	return (0);
 }
