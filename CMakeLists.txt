@@ -7,9 +7,6 @@ add_executable(push_swap push_swap.h instructions.c instructions_2.c
 		 push_swap.c checker.c push_swap_main.c)
 
 add_executable(checker push_swap.h instructions.c instructions_2.c
-		/Users/cimogene/42/push_swap/libft/ft_lstpop.c
-		/Users/cimogene/42/push_swap/libft/ft_lstadd_end.c
-		/Users/cimogene/42/push_swap/libft/ft_lstnew.c /Users/cimogene/42/push_swap/libft/ft_memcpy.c
 		checker.c push_swap.c checker_main.c )
 
 find_library(FT ft libft)

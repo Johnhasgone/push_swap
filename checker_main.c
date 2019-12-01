@@ -23,13 +23,12 @@ int			main(int argc, char **argv)
 		return (0);
 	if (array_to_list(argc, argv, &list_a) == 0 ||
 		read_instructions(&list_a, &list_b) == 0)
-	{
 		write(2, "Error\n", 6);
-		return (0);
-	}
-	if (sort_check(list_a) && !list_b)
+	else if (sort_check(list_a) && !list_b)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
+	delete_list(&list_a);
+	delete_list(&list_b);
 	return (0);
 }

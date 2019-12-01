@@ -253,114 +253,6 @@ instructions_2.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/instructions_2.c.s
 .PHONY : instructions_2.c.s
 
-libft/ft_lstadd_end.o: libft/ft_lstadd_end.c.o
-
-.PHONY : libft/ft_lstadd_end.o
-
-# target to build an object file
-libft/ft_lstadd_end.c.o:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lstadd_end.c.o
-.PHONY : libft/ft_lstadd_end.c.o
-
-libft/ft_lstadd_end.i: libft/ft_lstadd_end.c.i
-
-.PHONY : libft/ft_lstadd_end.i
-
-# target to preprocess a source file
-libft/ft_lstadd_end.c.i:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lstadd_end.c.i
-.PHONY : libft/ft_lstadd_end.c.i
-
-libft/ft_lstadd_end.s: libft/ft_lstadd_end.c.s
-
-.PHONY : libft/ft_lstadd_end.s
-
-# target to generate assembly for a file
-libft/ft_lstadd_end.c.s:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lstadd_end.c.s
-.PHONY : libft/ft_lstadd_end.c.s
-
-libft/ft_lstnew.o: libft/ft_lstnew.c.o
-
-.PHONY : libft/ft_lstnew.o
-
-# target to build an object file
-libft/ft_lstnew.c.o:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lstnew.c.o
-.PHONY : libft/ft_lstnew.c.o
-
-libft/ft_lstnew.i: libft/ft_lstnew.c.i
-
-.PHONY : libft/ft_lstnew.i
-
-# target to preprocess a source file
-libft/ft_lstnew.c.i:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lstnew.c.i
-.PHONY : libft/ft_lstnew.c.i
-
-libft/ft_lstnew.s: libft/ft_lstnew.c.s
-
-.PHONY : libft/ft_lstnew.s
-
-# target to generate assembly for a file
-libft/ft_lstnew.c.s:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lstnew.c.s
-.PHONY : libft/ft_lstnew.c.s
-
-libft/ft_lstpop.o: libft/ft_lstpop.c.o
-
-.PHONY : libft/ft_lstpop.o
-
-# target to build an object file
-libft/ft_lstpop.c.o:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lstpop.c.o
-.PHONY : libft/ft_lstpop.c.o
-
-libft/ft_lstpop.i: libft/ft_lstpop.c.i
-
-.PHONY : libft/ft_lstpop.i
-
-# target to preprocess a source file
-libft/ft_lstpop.c.i:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lstpop.c.i
-.PHONY : libft/ft_lstpop.c.i
-
-libft/ft_lstpop.s: libft/ft_lstpop.c.s
-
-.PHONY : libft/ft_lstpop.s
-
-# target to generate assembly for a file
-libft/ft_lstpop.c.s:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lstpop.c.s
-.PHONY : libft/ft_lstpop.c.s
-
-libft/ft_memcpy.o: libft/ft_memcpy.c.o
-
-.PHONY : libft/ft_memcpy.o
-
-# target to build an object file
-libft/ft_memcpy.c.o:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_memcpy.c.o
-.PHONY : libft/ft_memcpy.c.o
-
-libft/ft_memcpy.i: libft/ft_memcpy.c.i
-
-.PHONY : libft/ft_memcpy.i
-
-# target to preprocess a source file
-libft/ft_memcpy.c.i:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_memcpy.c.i
-.PHONY : libft/ft_memcpy.c.i
-
-libft/ft_memcpy.s: libft/ft_memcpy.c.s
-
-.PHONY : libft/ft_memcpy.s
-
-# target to generate assembly for a file
-libft/ft_memcpy.c.s:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_memcpy.c.s
-.PHONY : libft/ft_memcpy.c.s
-
 push_swap.o: push_swap.c.o
 
 .PHONY : push_swap.o
@@ -440,18 +332,6 @@ help:
 	@echo "... instructions_2.o"
 	@echo "... instructions_2.i"
 	@echo "... instructions_2.s"
-	@echo "... libft/ft_lstadd_end.o"
-	@echo "... libft/ft_lstadd_end.i"
-	@echo "... libft/ft_lstadd_end.s"
-	@echo "... libft/ft_lstnew.o"
-	@echo "... libft/ft_lstnew.i"
-	@echo "... libft/ft_lstnew.s"
-	@echo "... libft/ft_lstpop.o"
-	@echo "... libft/ft_lstpop.i"
-	@echo "... libft/ft_lstpop.s"
-	@echo "... libft/ft_memcpy.o"
-	@echo "... libft/ft_memcpy.i"
-	@echo "... libft/ft_memcpy.s"
 	@echo "... push_swap.o"
 	@echo "... push_swap.i"
 	@echo "... push_swap.s"

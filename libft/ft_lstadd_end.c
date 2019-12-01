@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_lstadd_end(t_list **alst, t_list *new)
+void		ft_lstadd_end(t_list **alst, t_list *new)
 {
 	t_list	*elem;
 
@@ -31,7 +31,7 @@ void	ft_lstadd_end(t_list **alst, t_list *new)
 	}
 }
 
-int	ft_lst_check_add_end(t_list **alst, t_list *new)
+int			ft_lst_check_add_end(t_list **alst, t_list *new)
 {
 	t_list	*elem;
 

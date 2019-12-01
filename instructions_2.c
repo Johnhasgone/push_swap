@@ -14,8 +14,8 @@
 
 void		list_swap_ab(t_list **list_a, t_list **list_b)
 {
-	list_swap(list_a);
-	list_swap(list_b);
+	list_swap(list_a, 0);
+	list_swap(list_b, 0);
 }
 
 void		list_rotate_ab(t_list **list_a, t_list **list_b)

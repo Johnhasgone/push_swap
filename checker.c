@@ -15,7 +15,7 @@
 int			int_check(char *str)
 {
 	int		i;
-	int 	num;
+	int		num;
 
 	i = 0;
 	while (str[i])
@@ -37,7 +37,7 @@ int			int_check(char *str)
 int			array_to_list(int argc, char **argv, t_list **list)
 {
 	int		i;
-	int		num;
+	int		*num;
 
 	i = 1;
 	while (i < argc)
@@ -46,9 +46,9 @@ int			array_to_list(int argc, char **argv, t_list **list)
 			return (0);
 		else
 		{
-			num = (int)malloc(sizeof(int));
-			num = ft_atoi(argv[i]);
-			if (!(ft_lst_check_add_end(list, ft_lstnew(&num, 4))))
+			num = (int*)malloc(sizeof(int));
+			*num = ft_atoi(argv[i]);
+			if (!(ft_lst_check_add_end(list, ft_lstnew(num, 4))))
 				return (0);
 			i++;
 		}
@@ -56,28 +56,39 @@ int			array_to_list(int argc, char **argv, t_list **list)
 	return (1);
 }
 
+void		delete_list(t_list **list)
+{
+	if (!*list)
+		return ;
+	if ((*list)->next != NULL)
+		delete_list(&(*list)->next);
+	free((*list)->content);
+	free(*list);
+	*list = NULL;
+}
+
 int			sort_list(t_list **list_a, t_list **list_b, char *line)
 {
 	if (ft_strcmp(line, "sa") == 0)
-		list_swap(list_a);
+		list_swap(list_a, 0);
 	else if (ft_strcmp(line, "sb") == 0)
-		list_swap(list_b);
+		list_swap(list_b, 0);
 	else if (ft_strcmp(line, "ss") == 0)
 		list_swap_ab(list_a, list_b);
 	else if (ft_strcmp(line, "pa") == 0)
-		list_push(list_a, list_b);
+		list_push(list_a, list_b, 0);
 	else if (ft_strcmp(line, "pb") == 0)
-		list_push(list_b, list_a);
+		list_push(list_b, list_a, 0);
 	else if (ft_strcmp(line, "ra") == 0)
-		list_rotate(list_a);
+		list_rotate(list_a, 0);
 	else if (ft_strcmp(line, "rb") == 0)
-		list_rotate(list_b);
+		list_rotate(list_b, 0);
 	else if (ft_strcmp(line, "rr") == 0)
 		list_rotate_ab(list_a, list_b);
 	else if (ft_strcmp(line, "rra") == 0)
-		list_reverse_rotate(list_a);
+		list_reverse_rotate(list_a, 0);
 	else if (ft_strcmp(line, "rrb") == 0)
-		list_reverse_rotate(list_b);
+		list_reverse_rotate(list_b, 0);
 	else if (ft_strcmp(line, "rrr") == 0)
 		list_reverse_rotate_ab(list_a, list_b);
 	else

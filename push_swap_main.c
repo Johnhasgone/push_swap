@@ -22,10 +22,7 @@ int			main(int argc, char **argv)
 	if (argc < 2)
 		return (0);
 	if (array_to_list(argc, argv, &list_a) == 0)
-	{
 		write(2, "Error\n", 6);
-		return (0);
-	}
 	else
 	{
 		while (!sort_check(list_a) || list_b)
@@ -34,5 +31,7 @@ int			main(int argc, char **argv)
 			push_swap_b(&list_b, &list_a);
 		}
 	}
+	delete_list(&list_a);
+	delete_list(&list_b);
 	return (0);
 }

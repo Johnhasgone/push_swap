@@ -15,7 +15,6 @@
 #include <stdlib.h>
 #include "libft.h"
 
-
 static void			add_lst(t_lst **begin_list, char *s, int fd)
 {
 	t_lst			*current;

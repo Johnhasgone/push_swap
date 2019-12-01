@@ -21,51 +21,50 @@ int			last_number(t_list *list)
 
 void		push_swap_a(t_list **list_a, t_list **list_b)
 {
-	int		last_num_a;
+	int		last_a;
 
-	last_num_a = last_number(*list_a);
-	if (last_num_a < LIST_A->content && last_num_a < LIST_A->next->content)
+	last_a = last_number(*list_a);
+	if (last_a < LIST_A->content && last_a < LIST_A->next->content)
 	{
-		list_reverse_rotate(list_a);
-		write(1, "rra\n", 4);
+		if (LIST_A->content > LIST_A->next->content)
+			list_swap(list_a, 'a');
+		list_reverse_rotate(list_a, 'a');
 	}
-	if (LIST_A->next->content < LIST_A->content)
+	if (LIST_A->content < last_a && LIST_A->content < LIST_A->next->content)
 	{
-		list_swap(list_a);
-		write(1, "sa\n", 3);
+		if (last_a < LIST_A->next->content)
+		{
+			list_swap(list_a, 'a');
+			list_rotate(list_a, 'a');
+		}
 	}
+	if (LIST_A->next->content < LIST_A->content &&
+	LIST_A->next->content < last_a)
+		LIST_A->content > last_a ? list_rotate(list_a, 'a') :
+		list_swap(list_a, 'a');
 	if (!sort_check(*list_a) && (!*list_b || !(*list_b)->next ||
-		LIST_A->content > LIST_B->next->content ||
-		LIST_A->content < last_number(*list_b)))
-	{
-		list_push(list_b, list_a);
-		write(1, "pb\n", 3);
-	}
+	LIST_A->content > LIST_B->next->content ||
+	LIST_A->content < last_number(*list_b)))
+		list_push(list_b, list_a, 'b');
 }
 
 void		push_swap_b(t_list **list_b, t_list **list_a)
 {
 	int		last_num_b;
 
-	last_num_b = last_number(*list_b);
-	if ((*list_b)->next && LIST_B->content < LIST_B->next->content &&
+	if (*list_b && (*list_b)->next)
+	{
+		last_num_b = last_number(*list_b);
+		if ((*list_b)->next && LIST_B->content < LIST_B->next->content &&
 		LIST_B->content > last_num_b)
-	{
-		list_swap(list_b);
-		write(1, "sb\n", 3);
-	}
-	if ((*list_b)->next && LIST_B->content < LIST_B->next->content &&
+			list_swap(list_b, 'b');
+		if ((*list_b)->next && LIST_B->content < LIST_B->next->content &&
 		LIST_B->content < last_num_b)
-	{
-		list_rotate(list_b);
-		write(1, "rb\n", 3);
+			list_rotate(list_b, 'b');
 	}
-	if ((LIST_B->content > LIST_A->content && (*list_b)->next) ||
+	if ((*list_b && (*list_b)->next && LIST_B->content > LIST_A->content) ||
 	sort_check(*list_a))
-	{
-		list_push(list_a, list_b);
-		write(1, "pa\n", 3);
-	}
+		list_push(list_a, list_b, 'a');
 }
 
 int			sort_check(t_list *list_a)

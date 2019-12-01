@@ -83,61 +83,9 @@ CMakeFiles/checker.dir/instructions_2.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/instructions_2.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cimogene/42/push_swap/instructions_2.c -o CMakeFiles/checker.dir/instructions_2.c.s
 
-CMakeFiles/checker.dir/libft/ft_lstpop.c.o: CMakeFiles/checker.dir/flags.make
-CMakeFiles/checker.dir/libft/ft_lstpop.c.o: ../libft/ft_lstpop.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/checker.dir/libft/ft_lstpop.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/libft/ft_lstpop.c.o   -c /Users/cimogene/42/push_swap/libft/ft_lstpop.c
-
-CMakeFiles/checker.dir/libft/ft_lstpop.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/checker.dir/libft/ft_lstpop.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cimogene/42/push_swap/libft/ft_lstpop.c > CMakeFiles/checker.dir/libft/ft_lstpop.c.i
-
-CMakeFiles/checker.dir/libft/ft_lstpop.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/libft/ft_lstpop.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cimogene/42/push_swap/libft/ft_lstpop.c -o CMakeFiles/checker.dir/libft/ft_lstpop.c.s
-
-CMakeFiles/checker.dir/libft/ft_lstadd_end.c.o: CMakeFiles/checker.dir/flags.make
-CMakeFiles/checker.dir/libft/ft_lstadd_end.c.o: ../libft/ft_lstadd_end.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/checker.dir/libft/ft_lstadd_end.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/libft/ft_lstadd_end.c.o   -c /Users/cimogene/42/push_swap/libft/ft_lstadd_end.c
-
-CMakeFiles/checker.dir/libft/ft_lstadd_end.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/checker.dir/libft/ft_lstadd_end.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cimogene/42/push_swap/libft/ft_lstadd_end.c > CMakeFiles/checker.dir/libft/ft_lstadd_end.c.i
-
-CMakeFiles/checker.dir/libft/ft_lstadd_end.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/libft/ft_lstadd_end.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cimogene/42/push_swap/libft/ft_lstadd_end.c -o CMakeFiles/checker.dir/libft/ft_lstadd_end.c.s
-
-CMakeFiles/checker.dir/libft/ft_lstnew.c.o: CMakeFiles/checker.dir/flags.make
-CMakeFiles/checker.dir/libft/ft_lstnew.c.o: ../libft/ft_lstnew.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/checker.dir/libft/ft_lstnew.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/libft/ft_lstnew.c.o   -c /Users/cimogene/42/push_swap/libft/ft_lstnew.c
-
-CMakeFiles/checker.dir/libft/ft_lstnew.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/checker.dir/libft/ft_lstnew.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cimogene/42/push_swap/libft/ft_lstnew.c > CMakeFiles/checker.dir/libft/ft_lstnew.c.i
-
-CMakeFiles/checker.dir/libft/ft_lstnew.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/libft/ft_lstnew.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cimogene/42/push_swap/libft/ft_lstnew.c -o CMakeFiles/checker.dir/libft/ft_lstnew.c.s
-
-CMakeFiles/checker.dir/libft/ft_memcpy.c.o: CMakeFiles/checker.dir/flags.make
-CMakeFiles/checker.dir/libft/ft_memcpy.c.o: ../libft/ft_memcpy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/checker.dir/libft/ft_memcpy.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/libft/ft_memcpy.c.o   -c /Users/cimogene/42/push_swap/libft/ft_memcpy.c
-
-CMakeFiles/checker.dir/libft/ft_memcpy.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/checker.dir/libft/ft_memcpy.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/cimogene/42/push_swap/libft/ft_memcpy.c > CMakeFiles/checker.dir/libft/ft_memcpy.c.i
-
-CMakeFiles/checker.dir/libft/ft_memcpy.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/checker.dir/libft/ft_memcpy.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/cimogene/42/push_swap/libft/ft_memcpy.c -o CMakeFiles/checker.dir/libft/ft_memcpy.c.s
-
 CMakeFiles/checker.dir/checker.c.o: CMakeFiles/checker.dir/flags.make
 CMakeFiles/checker.dir/checker.c.o: ../checker.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/checker.dir/checker.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/checker.dir/checker.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/checker.c.o   -c /Users/cimogene/42/push_swap/checker.c
 
 CMakeFiles/checker.dir/checker.c.i: cmake_force
@@ -150,7 +98,7 @@ CMakeFiles/checker.dir/checker.c.s: cmake_force
 
 CMakeFiles/checker.dir/push_swap.c.o: CMakeFiles/checker.dir/flags.make
 CMakeFiles/checker.dir/push_swap.c.o: ../push_swap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/checker.dir/push_swap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/checker.dir/push_swap.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/push_swap.c.o   -c /Users/cimogene/42/push_swap/push_swap.c
 
 CMakeFiles/checker.dir/push_swap.c.i: cmake_force
@@ -163,7 +111,7 @@ CMakeFiles/checker.dir/push_swap.c.s: cmake_force
 
 CMakeFiles/checker.dir/checker_main.c.o: CMakeFiles/checker.dir/flags.make
 CMakeFiles/checker.dir/checker_main.c.o: ../checker_main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/checker.dir/checker_main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/checker.dir/checker_main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/checker.dir/checker_main.c.o   -c /Users/cimogene/42/push_swap/checker_main.c
 
 CMakeFiles/checker.dir/checker_main.c.i: cmake_force
@@ -178,10 +126,6 @@ CMakeFiles/checker.dir/checker_main.c.s: cmake_force
 checker_OBJECTS = \
 "CMakeFiles/checker.dir/instructions.c.o" \
 "CMakeFiles/checker.dir/instructions_2.c.o" \
-"CMakeFiles/checker.dir/libft/ft_lstpop.c.o" \
-"CMakeFiles/checker.dir/libft/ft_lstadd_end.c.o" \
-"CMakeFiles/checker.dir/libft/ft_lstnew.c.o" \
-"CMakeFiles/checker.dir/libft/ft_memcpy.c.o" \
 "CMakeFiles/checker.dir/checker.c.o" \
 "CMakeFiles/checker.dir/push_swap.c.o" \
 "CMakeFiles/checker.dir/checker_main.c.o"
@@ -191,17 +135,13 @@ checker_EXTERNAL_OBJECTS =
 
 checker: CMakeFiles/checker.dir/instructions.c.o
 checker: CMakeFiles/checker.dir/instructions_2.c.o
-checker: CMakeFiles/checker.dir/libft/ft_lstpop.c.o
-checker: CMakeFiles/checker.dir/libft/ft_lstadd_end.c.o
-checker: CMakeFiles/checker.dir/libft/ft_lstnew.c.o
-checker: CMakeFiles/checker.dir/libft/ft_memcpy.c.o
 checker: CMakeFiles/checker.dir/checker.c.o
 checker: CMakeFiles/checker.dir/push_swap.c.o
 checker: CMakeFiles/checker.dir/checker_main.c.o
 checker: CMakeFiles/checker.dir/build.make
 checker: ../libft/libft.a
 checker: CMakeFiles/checker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking C executable checker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable checker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/checker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
