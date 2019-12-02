@@ -21,27 +21,50 @@ int			last_number(t_list *list)
 
 void		push_swap_a(t_list **list_a, t_list **list_b)
 {
-	int		last_a;
+	//t_list	*node;
 
-	last_a = last_number(*list_a);
-	if (last_a < LIST_A->content && last_a < LIST_A->next->content)
+	if (last_number(*list_a) < LIST_A->content && last_number(*list_a) <= LIST_A->next->content)
 	{
 		if (LIST_A->content > LIST_A->next->content)
 			list_swap(list_a, 'a');
-		list_reverse_rotate(list_a, 'a');
+		if (!(sort_check(*list_a)))
+			list_reverse_rotate(list_a, 'a');
 	}
-	if (LIST_A->content < last_a && LIST_A->content < LIST_A->next->content)
+	if (LIST_A->content < last_number(*list_a) && LIST_A->content < LIST_A->next->content)
 	{
-		if (last_a < LIST_A->next->content)
+		if (last_number(*list_a) < LIST_A->next->content)
 		{
+			list_reverse_rotate(list_a, 'a');
 			list_swap(list_a, 'a');
-			list_rotate(list_a, 'a');
 		}
 	}
 	if (LIST_A->next->content < LIST_A->content &&
-	LIST_A->next->content < last_a)
-		LIST_A->content > last_a ? list_rotate(list_a, 'a') :
+	LIST_A->next->content <= last_number(*list_a))
+		LIST_A->content > last_number(*list_a) ? list_rotate(list_a, 'a') :
 		list_swap(list_a, 'a');
+
+	/*
+	node = *list_a;
+	while (node->next)
+	{
+		if (node->next->next == NULL)
+		{
+			if (*(int*)node->next->content < *(int*)node->content)
+			{
+				list_reverse_rotate(list_a, 'a');
+				list_reverse_rotate(list_a, 'a');
+				list_swap(list_a, 'a');
+				list_rotate(list_a, 'a');
+				list_rotate(list_a, 'a');
+			}
+			else
+				break ;
+		}
+		else
+			node = node->next;
+	}
+
+	*/
 	if (!sort_check(*list_a) && (!*list_b || !(*list_b)->next ||
 	LIST_A->content > LIST_B->next->content ||
 	LIST_A->content < last_number(*list_b)))
@@ -62,8 +85,8 @@ void		push_swap_b(t_list **list_b, t_list **list_a)
 		LIST_B->content < last_num_b)
 			list_rotate(list_b, 'b');
 	}
-	if ((*list_b && (*list_b)->next && LIST_B->content > LIST_A->content) ||
-	sort_check(*list_a))
+	if (*list_b && (LIST_B->content > LIST_A->content ||
+	sort_check(*list_a)))
 		list_push(list_a, list_b, 'a');
 }
 
