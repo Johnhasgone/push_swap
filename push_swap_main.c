@@ -16,6 +16,8 @@ int			main(int argc, char **argv)
 {
 	t_list	*list_a;
 	t_list	*list_b;
+	int		aver;
+	int		i;
 
 	list_a = NULL;
 	list_b = NULL;
@@ -25,10 +27,16 @@ int			main(int argc, char **argv)
 		write(2, "Error\n", 6);
 	else
 	{
+		aver = average(list_a);
+		i = count(list_a);
+		if (i > 50)
+			devide(&list_a, &list_b, aver);
 		while (!sort_check(list_a) || list_b)
 		{
-			push_swap_a(&list_a, &list_b);
-			push_swap_b(&list_b, &list_a);
+			aver = average(list_a);
+			push_swap_a(&list_a, &list_b, aver);
+			aver = average(list_b);
+			push_swap_b(&list_b, &list_a, aver);
 		}
 	}
 	delete_list(&list_a);
