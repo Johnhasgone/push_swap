@@ -27,17 +27,16 @@ int			main(int argc, char **argv)
 		write(2, "Error\n", 6);
 	else
 	{
-		aver = average(list_a);
 		i = count(list_a);
-		if (i > 50)
-			devide(&list_a, &list_b, aver);
-		while (!sort_check(list_a) || list_b)
-		{
-			aver = average(list_a);
-			push_swap_a(&list_a, &list_b, aver);
-			aver = average(list_b);
-			push_swap_b(&list_b, &list_a, aver);
-		}
+		devide(&list_a, &list_b);
+//		while (!sort_check(list_a) || list_b)
+//		{
+//			aver = average(list_a);
+//			if (list_a && list_a->next)
+//				push_swap_a(&list_a, &list_b, aver);
+//			aver = average(list_b);
+//			push_swap_b(&list_b, &list_a, aver);
+//		}
 	}
 	delete_list(&list_a);
 	delete_list(&list_b);

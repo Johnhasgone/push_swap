@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/cimogene/42/push_swap/./libft/libft.h
+/Users/euvaganov/42/push_swap/libft/libft.h
 string.h
 -
 unistd.h
@@ -14,11 +14,11 @@ unistd.h
 stdlib.h
 -
 
-/Users/cimogene/42/push_swap/push_swap.c
+/Users/euvaganov/42/push_swap/push_swap.c
 push_swap.h
-/Users/cimogene/42/push_swap/push_swap.h
+/Users/euvaganov/42/push_swap/push_swap.h
 
-/Users/cimogene/42/push_swap/push_swap.h
+/Users/euvaganov/42/push_swap/push_swap.h
 ./libft/libft.h
-/Users/cimogene/42/push_swap/./libft/libft.h
+/Users/euvaganov/42/push_swap/libft/libft.h
 

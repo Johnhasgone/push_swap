@@ -40,8 +40,8 @@ void	push_swap_a_first(t_list **list_a, t_list **list_b, int min, int max);
 void	push_swap_a_last(t_list **list_a, t_list **list_b, int min, int max);
 int 	find_min(t_list *list);
 int 	find_max(t_list *list);
-int average(t_list *list);
-void		devide(t_list **list_a, t_list **list_b, int aver);
+int 	average(t_list *list);
+void 	devide(t_list **list_a, t_list **list_b);
 int 		count(t_list *list);
 
 #endif
