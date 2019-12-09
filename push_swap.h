@@ -26,22 +26,19 @@ void	list_rotate_ab(t_list **list_a, t_list **list_b);
 void	list_reverse_rotate(t_list **list, char type);
 void	list_reverse_rotate_ab(t_list **list_a, t_list **list_b);
 
-void	push_swap_a(t_list **list_a, t_list **list_b, int aver);
-void push_swap_b(t_list **list_b, t_list **list_a, int aver);
+void 	push_swap_a(t_list **list_a, t_list **list_b, int iter_base, int iter);
+void	push_swap_b(t_list **list_b, t_list **list_a);
 
 int		array_to_list(int argc, char **argv, t_list **list);
 int		int_check(char *str);
 int		sort_list(t_list **list_a, t_list **list_b, char *line);
 int		read_instructions(t_list **list_a, t_list **list_b);
-int		sort_check(t_list *list_a);
+int sort_check_a(t_list *list_a, t_list *list_b);
 int		last_number(t_list *list);
 void	delete_list(t_list **list);
-void	push_swap_a_first(t_list **list_a, t_list **list_b, int min, int max);
-void	push_swap_a_last(t_list **list_a, t_list **list_b, int min, int max);
-int 	find_min(t_list *list);
-int 	find_max(t_list *list);
-int 	average(t_list *list);
+int 	average(t_list *list, int iteration);
 void 	devide(t_list **list_a, t_list **list_b);
-int 		count(t_list *list);
+int 	count_iter_base(t_list *list, int iter_base);
+void		init_iter(t_list **list);
 
 #endif

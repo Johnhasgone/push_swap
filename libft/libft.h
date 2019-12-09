@@ -22,6 +22,7 @@ typedef struct		s_list
 {
 	int				*content;
 	size_t			content_size;
+	int 			iter;
 	struct s_list	*next;
 }					t_list;
 

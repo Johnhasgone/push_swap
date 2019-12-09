@@ -24,7 +24,7 @@ int			main(int argc, char **argv)
 	if (array_to_list(argc, argv, &list_a) == 0 ||
 		read_instructions(&list_a, &list_b) == 0)
 		write(2, "Error\n", 6);
-	else if (sort_check(list_a) && !list_b)
+	else if (sort_check_a(list_a, NULL) && !list_b)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
