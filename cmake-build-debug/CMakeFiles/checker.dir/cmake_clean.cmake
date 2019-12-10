@@ -4,6 +4,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/checker.dir/instructions.c.o"
   "CMakeFiles/checker.dir/instructions_2.c.o"
   "CMakeFiles/checker.dir/push_swap.c.o"
+  "CMakeFiles/checker.dir/stack_a_func.c.o"
+  "CMakeFiles/checker.dir/utils.c.o"
+  "CMakeFiles/checker.dir/utils2.c.o"
   "checker"
   "checker.pdb"
 )

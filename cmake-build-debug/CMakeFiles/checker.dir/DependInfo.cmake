@@ -4,11 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/euvaganov/42/push_swap/checker.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/checker.c.o"
-  "/Users/euvaganov/42/push_swap/checker_main.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/checker_main.c.o"
-  "/Users/euvaganov/42/push_swap/instructions.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/instructions.c.o"
-  "/Users/euvaganov/42/push_swap/instructions_2.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/instructions_2.c.o"
-  "/Users/euvaganov/42/push_swap/push_swap.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/push_swap.c.o"
+  "/Users/cimogene/42/push_swap/checker.c" "/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/checker.c.o"
+  "/Users/cimogene/42/push_swap/checker_main.c" "/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/checker_main.c.o"
+  "/Users/cimogene/42/push_swap/instructions.c" "/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/instructions.c.o"
+  "/Users/cimogene/42/push_swap/instructions_2.c" "/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/instructions_2.c.o"
+  "/Users/cimogene/42/push_swap/push_swap.c" "/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/push_swap.c.o"
+  "/Users/cimogene/42/push_swap/stack_a_func.c" "/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/stack_a_func.c.o"
+  "/Users/cimogene/42/push_swap/utils.c" "/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/utils.c.o"
+  "/Users/cimogene/42/push_swap/utils2.c" "/Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/utils2.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

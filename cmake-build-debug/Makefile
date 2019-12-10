@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/euvaganov/42/push_swap
+CMAKE_SOURCE_DIR = /Users/cimogene/42/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/euvaganov/42/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/cimogene/42/push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles /Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles /Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -310,6 +310,87 @@ push_swap_main.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap_main.c.s
 .PHONY : push_swap_main.c.s
 
+stack_a_func.o: stack_a_func.c.o
+
+.PHONY : stack_a_func.o
+
+# target to build an object file
+stack_a_func.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/stack_a_func.c.o
+.PHONY : stack_a_func.c.o
+
+stack_a_func.i: stack_a_func.c.i
+
+.PHONY : stack_a_func.i
+
+# target to preprocess a source file
+stack_a_func.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/stack_a_func.c.i
+.PHONY : stack_a_func.c.i
+
+stack_a_func.s: stack_a_func.c.s
+
+.PHONY : stack_a_func.s
+
+# target to generate assembly for a file
+stack_a_func.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/stack_a_func.c.s
+.PHONY : stack_a_func.c.s
+
+utils.o: utils.c.o
+
+.PHONY : utils.o
+
+# target to build an object file
+utils.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils.c.o
+.PHONY : utils.c.o
+
+utils.i: utils.c.i
+
+.PHONY : utils.i
+
+# target to preprocess a source file
+utils.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils.c.i
+.PHONY : utils.c.i
+
+utils.s: utils.c.s
+
+.PHONY : utils.s
+
+# target to generate assembly for a file
+utils.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils.c.s
+.PHONY : utils.c.s
+
+utils2.o: utils2.c.o
+
+.PHONY : utils2.o
+
+# target to build an object file
+utils2.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils2.c.o
+.PHONY : utils2.c.o
+
+utils2.i: utils2.c.i
+
+.PHONY : utils2.i
+
+# target to preprocess a source file
+utils2.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils2.c.i
+.PHONY : utils2.c.i
+
+utils2.s: utils2.c.s
+
+.PHONY : utils2.s
+
+# target to generate assembly for a file
+utils2.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils2.c.s
+.PHONY : utils2.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -338,6 +419,15 @@ help:
 	@echo "... push_swap_main.o"
 	@echo "... push_swap_main.i"
 	@echo "... push_swap_main.s"
+	@echo "... stack_a_func.o"
+	@echo "... stack_a_func.i"
+	@echo "... stack_a_func.s"
+	@echo "... utils.o"
+	@echo "... utils.i"
+	@echo "... utils.s"
+	@echo "... utils2.o"
+	@echo "... utils2.i"
+	@echo "... utils2.s"
 .PHONY : help
 
 
