@@ -27,7 +27,7 @@ SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 		ft_lstmap.c \
 		ft_lstpop_end.c ft_lstadd_end.c ft_strlen_p.c ft_count_if.c ft_free_lst.c \
 		ft_lstpop.c \
-		ft_iswhitespace.c get_next_line.c
+		ft_iswhitespace.c get_next_line.c ft_countrows.c ft_lst_check_add_end.c
 
 OBJ = $(subst .c,.o,$(SRC))
 

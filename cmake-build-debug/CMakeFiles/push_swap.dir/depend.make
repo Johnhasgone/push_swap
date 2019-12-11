@@ -13,11 +13,23 @@ CMakeFiles/push_swap.dir/instructions_2.c.o: ../instructions_2.c
 CMakeFiles/push_swap.dir/instructions_2.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/instructions_2.c.o: ../push_swap.h
 
-CMakeFiles/push_swap.dir/push_swap.c.o: ../libft/libft.h
-CMakeFiles/push_swap.dir/push_swap.c.o: ../push_swap.c
-CMakeFiles/push_swap.dir/push_swap.c.o: ../push_swap.h
-
 CMakeFiles/push_swap.dir/push_swap_main.c.o: ../libft/libft.h
 CMakeFiles/push_swap.dir/push_swap_main.c.o: ../push_swap.h
 CMakeFiles/push_swap.dir/push_swap_main.c.o: ../push_swap_main.c
+
+CMakeFiles/push_swap.dir/stack_a_func.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/stack_a_func.c.o: ../push_swap.h
+CMakeFiles/push_swap.dir/stack_a_func.c.o: ../stack_a_func.c
+
+CMakeFiles/push_swap.dir/stack_b_func.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/stack_b_func.c.o: ../push_swap.h
+CMakeFiles/push_swap.dir/stack_b_func.c.o: ../stack_b_func.c
+
+CMakeFiles/push_swap.dir/utils.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/utils.c.o: ../push_swap.h
+CMakeFiles/push_swap.dir/utils.c.o: ../utils.c
+
+CMakeFiles/push_swap.dir/utils2.c.o: ../libft/libft.h
+CMakeFiles/push_swap.dir/utils2.c.o: ../push_swap.h
+CMakeFiles/push_swap.dir/utils2.c.o: ../utils2.c
 

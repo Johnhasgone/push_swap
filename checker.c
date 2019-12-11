@@ -29,8 +29,15 @@ int			int_check(char *str)
 	}
 	if ((num = ft_atoi(str)) < 0)
 		num *= -1;
-	if (num % 10 != str[i - 1] - '0')
+	if (num < 0 || (num == 0 && ft_strlen(str) > 2)
+	|| (num == 1 && ft_strlen(str) > 2))
 		return (0);
+	while (num > 0)
+	{
+		if (num % 10 != str[--i] - '0')
+			return (0);
+		num /= 10;
+	}
 	return (1);
 }
 
@@ -38,20 +45,27 @@ int			array_to_list(int argc, char **argv, t_list **list)
 {
 	int		i;
 	int		*num;
+	char	**args;
 
-	i = 1;
+	if (argc == 2)
+	{
+		args = ft_strsplit(argv[1], ' ');
+		i = 0;
+		argc = ft_countrows(argv[1], ' ');
+	}
+	else
+	{
+		i = 1;
+		args = argv;
+	}
 	while (i < argc)
 	{
-		if (int_check(argv[i]) == 0)
+		if (int_check(args[i]) == 0)
 			return (0);
-		else
-		{
-			num = (int*)malloc(sizeof(int));
-			*num = ft_atoi(argv[i]);
-			if (!(ft_lst_check_add_end(list, ft_lstnew(num, 4))))
-				return (0);
-			i++;
-		}
+		num = (int*)malloc(sizeof(int));
+		*num = ft_atoi(args[i++]);
+		if (!(ft_lst_check_add_end(list, ft_lstnew(num, 4))))
+			return (0);
 	}
 	return (1);
 }

@@ -9,15 +9,30 @@ CMakeFiles/checker.dir/checker_main.c.o: ../checker_main.c
 CMakeFiles/checker.dir/checker_main.c.o: ../libft/libft.h
 CMakeFiles/checker.dir/checker_main.c.o: ../push_swap.h
 
-CMakeFiles/checker.dir/instructions.c.o: ../instructions.c
-CMakeFiles/checker.dir/instructions.c.o: ../libft/libft.h
-CMakeFiles/checker.dir/instructions.c.o: ../push_swap.h
+CMakeFiles/checker.dir/instructions_1.c.o: ../instructions_1.c
+CMakeFiles/checker.dir/instructions_1.c.o: ../libft/libft.h
+CMakeFiles/checker.dir/instructions_1.c.o: ../push_swap.h
 
 CMakeFiles/checker.dir/instructions_2.c.o: ../instructions_2.c
 CMakeFiles/checker.dir/instructions_2.c.o: ../libft/libft.h
 CMakeFiles/checker.dir/instructions_2.c.o: ../push_swap.h
 
-CMakeFiles/checker.dir/push_swap.c.o: ../libft/libft.h
-CMakeFiles/checker.dir/push_swap.c.o: ../push_swap.c
-CMakeFiles/checker.dir/push_swap.c.o: ../push_swap.h
+CMakeFiles/checker.dir/libft/ft_lst_check_add_end.c.o: ../libft/ft_lst_check_add_end.c
+CMakeFiles/checker.dir/libft/ft_lst_check_add_end.c.o: ../libft/libft.h
+
+CMakeFiles/checker.dir/stack_a_func.c.o: ../libft/libft.h
+CMakeFiles/checker.dir/stack_a_func.c.o: ../push_swap.h
+CMakeFiles/checker.dir/stack_a_func.c.o: ../stack_a_func.c
+
+CMakeFiles/checker.dir/stack_b_func.c.o: ../libft/libft.h
+CMakeFiles/checker.dir/stack_b_func.c.o: ../push_swap.h
+CMakeFiles/checker.dir/stack_b_func.c.o: ../stack_b_func.c
+
+CMakeFiles/checker.dir/utils_1.c.o: ../libft/libft.h
+CMakeFiles/checker.dir/utils_1.c.o: ../push_swap.h
+CMakeFiles/checker.dir/utils_1.c.o: ../utils_1.c
+
+CMakeFiles/checker.dir/utils_2.c.o: ../libft/libft.h
+CMakeFiles/checker.dir/utils_2.c.o: ../push_swap.h
+CMakeFiles/checker.dir/utils_2.c.o: ../utils_2.c
 

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_lst_check_add_end.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,12 +12,12 @@
 
 #include "libft.h"
 
-void		ft_lstadd_end(t_list **alst, t_list *new)
+int			ft_lst_check_add_end(t_list **alst, t_list *new)
 {
 	t_list	*elem;
 
 	if (new == NULL)
-		return ;
+		return (0);
 	elem = *alst;
 	if (elem == NULL)
 	{
@@ -25,8 +25,15 @@ void		ft_lstadd_end(t_list **alst, t_list *new)
 	}
 	else
 	{
-		while (elem->next)
+		while (elem)
+		{
+			if (*elem->content == *new->content)
+				return (0);
+			if (!elem->next)
+				break ;
 			elem = elem->next;
+		}
 		elem->next = new;
 	}
+	return (1);
 }

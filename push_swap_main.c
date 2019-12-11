@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void		quick_sort(t_list **list_a, t_list **list_b)
+void		push_swap_quick_sort(t_list **list_a, t_list **list_b)
 {
 	int		iter_base;
 	int		iter;
@@ -41,7 +41,7 @@ int			main(int argc, char **argv)
 	if (array_to_list(argc, argv, &list_a) == 0)
 		write(2, "Error\n", 6);
 	else
-		quick_sort(&list_a, &list_b);
+		push_swap_quick_sort(&list_a, &list_b);
 	delete_list(&list_a);
 	delete_list(&list_b);
 	return (0);

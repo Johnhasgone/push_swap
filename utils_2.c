@@ -12,23 +12,43 @@
 
 #include "push_swap.h"
 
-int			average(t_list *list, int iteration)
+int 		select_pivot(t_list *pivot, t_list *list, int iteration)
 {
-	int		i;
-	int		num;
+	int 	smaller;
 
-	i = 0;
-	num = 0;
+	smaller = 0;
 	while (list)
 	{
 		if (list->iter == iteration)
 		{
-			num += *(int*)list->content;
-			i++;
+			if (*list->content <= *pivot->content)
+				smaller++;
 		}
 		list = list->next;
 	}
-	return (i != 0 ? num / i : 0);
+	return (smaller);
+}
+
+int			median_pivot(t_list *list, int iteration)
+{
+	t_list	*pivot;
+
+	pivot = list;
+	while (pivot)
+	{
+		if (count_iter_base(list, iteration) % 2 == 0)
+		{
+			if (count_iter_base(list, iteration) / 2 == select_pivot(pivot, list, iteration))
+				return (*pivot->content);
+		}
+		else if (count_iter_base(list, iteration) % 2 == 1)
+		{
+			if (count_iter_base(list, iteration) / 2 + 1 == select_pivot(pivot, list, iteration))
+				return (*pivot->content);
+		}
+		pivot = pivot->next;
+	}
+	return (0);
 }
 
 int			choose_rotation(t_list *list, int aver)

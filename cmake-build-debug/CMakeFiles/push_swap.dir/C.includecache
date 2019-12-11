@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/cimogene/42/push_swap/libft/libft.h
+/Users/euvaganov/42/push_swap/checker.c
+push_swap.h
+/Users/euvaganov/42/push_swap/push_swap.h
+
+/Users/euvaganov/42/push_swap/instructions.c
+push_swap.h
+/Users/euvaganov/42/push_swap/push_swap.h
+
+/Users/euvaganov/42/push_swap/instructions_2.c
+push_swap.h
+/Users/euvaganov/42/push_swap/push_swap.h
+
+/Users/euvaganov/42/push_swap/libft/libft.h
 string.h
 -
 unistd.h
@@ -14,11 +26,27 @@ unistd.h
 stdlib.h
 -
 
-/Users/cimogene/42/push_swap/push_swap.h
+/Users/euvaganov/42/push_swap/push_swap.h
 ./libft/libft.h
-/Users/cimogene/42/push_swap/libft/libft.h
+/Users/euvaganov/42/push_swap/libft/libft.h
 
-/Users/cimogene/42/push_swap/push_swap_main.c
+/Users/euvaganov/42/push_swap/push_swap_main.c
 push_swap.h
-/Users/cimogene/42/push_swap/push_swap.h
+/Users/euvaganov/42/push_swap/push_swap.h
+
+/Users/euvaganov/42/push_swap/stack_a_func.c
+push_swap.h
+/Users/euvaganov/42/push_swap/push_swap.h
+
+/Users/euvaganov/42/push_swap/stack_b_func.c
+push_swap.h
+/Users/euvaganov/42/push_swap/push_swap.h
+
+/Users/euvaganov/42/push_swap/utils.c
+push_swap.h
+/Users/euvaganov/42/push_swap/push_swap.h
+
+/Users/euvaganov/42/push_swap/utils2.c
+push_swap.h
+/Users/euvaganov/42/push_swap/push_swap.h
 

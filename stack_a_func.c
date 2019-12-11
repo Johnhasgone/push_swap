@@ -72,7 +72,7 @@ void		push_swap_a(t_list **lst_a, t_list **lst_b, int iter_base, int iter)
 {
 	int		aver;
 
-	aver = average(*lst_a, iter_base);
+	aver = median_pivot(*lst_a, iter_base);
 	while (last_elem(*lst_a)->iter != 0 && !sort_check_a(*lst_a, *lst_b))
 		list_reverse_rotate(lst_a, 'a');
 	if (count_all(*lst_a) == 3 || *(*lst_a)->content > *(*lst_a)->next->content)

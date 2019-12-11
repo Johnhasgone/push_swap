@@ -24,29 +24,6 @@ int			check_aver_b(t_list *list, int aver)
 	return (1);
 }
 
-void		sort_small_stack_b(t_list **list)
-{
-	if (count_iter_base(*list, (*list)->iter) == 2)
-	{
-		if (*(*list)->content < *(*list)->next->content)
-			list_swap(list, 'b');
-		return ;
-	}
-	if (*(*list)->next->next->content > *(*list)->next->content)
-	{
-		if (*(*list)->next->content > *(*list)->content)
-			list_swap(list, 'b');
-		list_reverse_rotate(list, 'b');
-	}
-	if (*(*list)->content < *(*list)->next->content)
-	{
-		if (*(*list)->content > *(*list)->next->next->content)
-			list_swap(list, 'b');
-		else
-			list_rotate(list, 'b');
-	}
-}
-
 void		push_swap_b(t_list **list_a, t_list **list_b)
 {
 	int aver;
@@ -55,7 +32,7 @@ void		push_swap_b(t_list **list_a, t_list **list_b)
 
 	i = 0;
 	iter_base = (*list_b)->iter;
-	aver = average(*list_b, iter_base);
+	aver = median_pivot(*list_b, iter_base);
 	while (!check_aver_b(*list_b, aver))
 	{
 		while (last_number(*list_b) > *(*list_b)->content

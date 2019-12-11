@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/cimogene/42/push_swap
+CMAKE_SOURCE_DIR = /Users/euvaganov/42/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/cimogene/42/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/euvaganov/42/push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles /Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles /Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/cimogene/42/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -193,35 +193,35 @@ checker_main.c.s:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/checker_main.c.s
 .PHONY : checker_main.c.s
 
-instructions.o: instructions.c.o
+instructions_1.o: instructions_1.c.o
 
-.PHONY : instructions.o
+.PHONY : instructions_1.o
 
 # target to build an object file
-instructions.c.o:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/instructions.c.o
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/instructions.c.o
-.PHONY : instructions.c.o
+instructions_1.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/instructions_1.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/instructions_1.c.o
+.PHONY : instructions_1.c.o
 
-instructions.i: instructions.c.i
+instructions_1.i: instructions_1.c.i
 
-.PHONY : instructions.i
+.PHONY : instructions_1.i
 
 # target to preprocess a source file
-instructions.c.i:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/instructions.c.i
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/instructions.c.i
-.PHONY : instructions.c.i
+instructions_1.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/instructions_1.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/instructions_1.c.i
+.PHONY : instructions_1.c.i
 
-instructions.s: instructions.c.s
+instructions_1.s: instructions_1.c.s
 
-.PHONY : instructions.s
+.PHONY : instructions_1.s
 
 # target to generate assembly for a file
-instructions.c.s:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/instructions.c.s
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/instructions.c.s
-.PHONY : instructions.c.s
+instructions_1.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/instructions_1.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/instructions_1.c.s
+.PHONY : instructions_1.c.s
 
 instructions_2.o: instructions_2.c.o
 
@@ -253,35 +253,32 @@ instructions_2.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/instructions_2.c.s
 .PHONY : instructions_2.c.s
 
-push_swap.o: push_swap.c.o
+libft/ft_lst_check_add_end.o: libft/ft_lst_check_add_end.c.o
 
-.PHONY : push_swap.o
+.PHONY : libft/ft_lst_check_add_end.o
 
 # target to build an object file
-push_swap.c.o:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/push_swap.c.o
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.o
-.PHONY : push_swap.c.o
+libft/ft_lst_check_add_end.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lst_check_add_end.c.o
+.PHONY : libft/ft_lst_check_add_end.c.o
 
-push_swap.i: push_swap.c.i
+libft/ft_lst_check_add_end.i: libft/ft_lst_check_add_end.c.i
 
-.PHONY : push_swap.i
+.PHONY : libft/ft_lst_check_add_end.i
 
 # target to preprocess a source file
-push_swap.c.i:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/push_swap.c.i
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.i
-.PHONY : push_swap.c.i
+libft/ft_lst_check_add_end.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lst_check_add_end.c.i
+.PHONY : libft/ft_lst_check_add_end.c.i
 
-push_swap.s: push_swap.c.s
+libft/ft_lst_check_add_end.s: libft/ft_lst_check_add_end.c.s
 
-.PHONY : push_swap.s
+.PHONY : libft/ft_lst_check_add_end.s
 
 # target to generate assembly for a file
-push_swap.c.s:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/push_swap.c.s
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap.c.s
-.PHONY : push_swap.c.s
+libft/ft_lst_check_add_end.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/libft/ft_lst_check_add_end.c.s
+.PHONY : libft/ft_lst_check_add_end.c.s
 
 push_swap_main.o: push_swap_main.c.o
 
@@ -317,6 +314,7 @@ stack_a_func.o: stack_a_func.c.o
 # target to build an object file
 stack_a_func.c.o:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/stack_a_func.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/stack_a_func.c.o
 .PHONY : stack_a_func.c.o
 
 stack_a_func.i: stack_a_func.c.i
@@ -326,6 +324,7 @@ stack_a_func.i: stack_a_func.c.i
 # target to preprocess a source file
 stack_a_func.c.i:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/stack_a_func.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/stack_a_func.c.i
 .PHONY : stack_a_func.c.i
 
 stack_a_func.s: stack_a_func.c.s
@@ -335,61 +334,98 @@ stack_a_func.s: stack_a_func.c.s
 # target to generate assembly for a file
 stack_a_func.c.s:
 	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/stack_a_func.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/stack_a_func.c.s
 .PHONY : stack_a_func.c.s
 
-utils.o: utils.c.o
+stack_b_func.o: stack_b_func.c.o
 
-.PHONY : utils.o
-
-# target to build an object file
-utils.c.o:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils.c.o
-.PHONY : utils.c.o
-
-utils.i: utils.c.i
-
-.PHONY : utils.i
-
-# target to preprocess a source file
-utils.c.i:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils.c.i
-.PHONY : utils.c.i
-
-utils.s: utils.c.s
-
-.PHONY : utils.s
-
-# target to generate assembly for a file
-utils.c.s:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils.c.s
-.PHONY : utils.c.s
-
-utils2.o: utils2.c.o
-
-.PHONY : utils2.o
+.PHONY : stack_b_func.o
 
 # target to build an object file
-utils2.c.o:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils2.c.o
-.PHONY : utils2.c.o
+stack_b_func.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/stack_b_func.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/stack_b_func.c.o
+.PHONY : stack_b_func.c.o
 
-utils2.i: utils2.c.i
+stack_b_func.i: stack_b_func.c.i
 
-.PHONY : utils2.i
+.PHONY : stack_b_func.i
 
 # target to preprocess a source file
-utils2.c.i:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils2.c.i
-.PHONY : utils2.c.i
+stack_b_func.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/stack_b_func.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/stack_b_func.c.i
+.PHONY : stack_b_func.c.i
 
-utils2.s: utils2.c.s
+stack_b_func.s: stack_b_func.c.s
 
-.PHONY : utils2.s
+.PHONY : stack_b_func.s
 
 # target to generate assembly for a file
-utils2.c.s:
-	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils2.c.s
-.PHONY : utils2.c.s
+stack_b_func.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/stack_b_func.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/stack_b_func.c.s
+.PHONY : stack_b_func.c.s
+
+utils_1.o: utils_1.c.o
+
+.PHONY : utils_1.o
+
+# target to build an object file
+utils_1.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils_1.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/utils_1.c.o
+.PHONY : utils_1.c.o
+
+utils_1.i: utils_1.c.i
+
+.PHONY : utils_1.i
+
+# target to preprocess a source file
+utils_1.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils_1.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/utils_1.c.i
+.PHONY : utils_1.c.i
+
+utils_1.s: utils_1.c.s
+
+.PHONY : utils_1.s
+
+# target to generate assembly for a file
+utils_1.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils_1.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/utils_1.c.s
+.PHONY : utils_1.c.s
+
+utils_2.o: utils_2.c.o
+
+.PHONY : utils_2.o
+
+# target to build an object file
+utils_2.c.o:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils_2.c.o
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/utils_2.c.o
+.PHONY : utils_2.c.o
+
+utils_2.i: utils_2.c.i
+
+.PHONY : utils_2.i
+
+# target to preprocess a source file
+utils_2.c.i:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils_2.c.i
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/utils_2.c.i
+.PHONY : utils_2.c.i
+
+utils_2.s: utils_2.c.s
+
+.PHONY : utils_2.s
+
+# target to generate assembly for a file
+utils_2.c.s:
+	$(MAKE) -f CMakeFiles/checker.dir/build.make CMakeFiles/checker.dir/utils_2.c.s
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/utils_2.c.s
+.PHONY : utils_2.c.s
 
 # Help Target
 help:
@@ -407,27 +443,30 @@ help:
 	@echo "... checker_main.o"
 	@echo "... checker_main.i"
 	@echo "... checker_main.s"
-	@echo "... instructions.o"
-	@echo "... instructions.i"
-	@echo "... instructions.s"
+	@echo "... instructions_1.o"
+	@echo "... instructions_1.i"
+	@echo "... instructions_1.s"
 	@echo "... instructions_2.o"
 	@echo "... instructions_2.i"
 	@echo "... instructions_2.s"
-	@echo "... push_swap.o"
-	@echo "... push_swap.i"
-	@echo "... push_swap.s"
+	@echo "... libft/ft_lst_check_add_end.o"
+	@echo "... libft/ft_lst_check_add_end.i"
+	@echo "... libft/ft_lst_check_add_end.s"
 	@echo "... push_swap_main.o"
 	@echo "... push_swap_main.i"
 	@echo "... push_swap_main.s"
 	@echo "... stack_a_func.o"
 	@echo "... stack_a_func.i"
 	@echo "... stack_a_func.s"
-	@echo "... utils.o"
-	@echo "... utils.i"
-	@echo "... utils.s"
-	@echo "... utils2.o"
-	@echo "... utils2.i"
-	@echo "... utils2.s"
+	@echo "... stack_b_func.o"
+	@echo "... stack_b_func.i"
+	@echo "... stack_b_func.s"
+	@echo "... utils_1.o"
+	@echo "... utils_1.i"
+	@echo "... utils_1.s"
+	@echo "... utils_2.o"
+	@echo "... utils_2.i"
+	@echo "... utils_2.s"
 .PHONY : help
 
 

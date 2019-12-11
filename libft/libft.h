@@ -87,6 +87,8 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+int					ft_countrows(char const *s, char c);
+int					ft_lst_check_add_end(t_list **alst, t_list *new);
 
 size_t				ft_strlen_p(const char *s);
 void				ft_lstadd_end(t_list **alst, t_list *new);
