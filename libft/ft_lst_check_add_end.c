@@ -28,7 +28,11 @@ int			ft_lst_check_add_end(t_list **alst, t_list *new)
 		while (elem)
 		{
 			if (*elem->content == *new->content)
+			{
+				free(new->content);
+				free(new);
 				return (0);
+			}
 			if (!elem->next)
 				break ;
 			elem = elem->next;

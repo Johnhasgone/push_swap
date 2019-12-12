@@ -41,24 +41,13 @@ int			int_check(char *str)
 	return (1);
 }
 
-int			array_to_list(int argc, char **argv, t_list **list)
+int			add_to_list(int i, int count, char **args, t_list **list)
 {
-	int		i;
 	int		*num;
-	char	**args;
 
-	if (argc == 2)
-	{
-		args = ft_strsplit(argv[1], ' ');
-		i = 0;
-		argc = ft_countrows(argv[1], ' ');
-	}
-	else
-	{
-		i = 1;
-		args = argv;
-	}
-	while (i < argc)
+	if (args[0] == 0)
+		return (0);
+	while (i < count)
 	{
 		if (int_check(args[i]) == 0)
 			return (0);
@@ -70,15 +59,32 @@ int			array_to_list(int argc, char **argv, t_list **list)
 	return (1);
 }
 
-void		delete_list(t_list **list)
+int			array_to_list(int argc, char **argv, t_list **list)
 {
-	if (!*list)
-		return ;
-	if ((*list)->next != NULL)
-		delete_list(&(*list)->next);
-	free((*list)->content);
-	free(*list);
-	*list = NULL;
+	char	**args;
+	int 	count;
+	int 	i;
+
+	if (argc == 2)
+	{
+		args = ft_strsplit(argv[1], ' ');
+		i = 0;
+		count = ft_countrows(argv[1], ' ');
+	}
+	else
+	{
+		i = 1;
+		args = argv;
+		count = argc;
+	}
+	if (!add_to_list(i, count, args, list))
+	{
+		ft_delmap(args, count);
+		return (0);
+	}
+	if (argc == 2)
+		ft_delmap(args, count);
+	return (1);
 }
 
 int			sort_list(t_list **list_a, t_list **list_b, char *line)

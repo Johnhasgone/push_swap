@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/euvaganov/42/push_swap/checker.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/checker.c.o"
-  "/Users/euvaganov/42/push_swap/checker_main.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/checker_main.c.o"
-  "/Users/euvaganov/42/push_swap/instructions_1.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/instructions_1.c.o"
-  "/Users/euvaganov/42/push_swap/instructions_2.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/instructions_2.c.o"
-  "/Users/euvaganov/42/push_swap/libft/ft_lst_check_add_end.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/libft/ft_lst_check_add_end.c.o"
-  "/Users/euvaganov/42/push_swap/stack_a_func.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/stack_a_func.c.o"
-  "/Users/euvaganov/42/push_swap/stack_b_func.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/stack_b_func.c.o"
-  "/Users/euvaganov/42/push_swap/utils_1.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/utils_1.c.o"
-  "/Users/euvaganov/42/push_swap/utils_2.c" "/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir/utils_2.c.o"
+  "/Users/cimogene/42/push_swap_working/checker.c" "/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/checker.dir/checker.c.o"
+  "/Users/cimogene/42/push_swap_working/checker_main.c" "/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/checker.dir/checker_main.c.o"
+  "/Users/cimogene/42/push_swap_working/instructions_1.c" "/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/checker.dir/instructions_1.c.o"
+  "/Users/cimogene/42/push_swap_working/instructions_2.c" "/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/checker.dir/instructions_2.c.o"
+  "/Users/cimogene/42/push_swap_working/libft/ft_lst_check_add_end.c" "/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/checker.dir/libft/ft_lst_check_add_end.c.o"
+  "/Users/cimogene/42/push_swap_working/push_swap_func.c" "/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/checker.dir/push_swap_func.c.o"
+  "/Users/cimogene/42/push_swap_working/utils_1.c" "/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/checker.dir/utils_1.c.o"
+  "/Users/cimogene/42/push_swap_working/utils_2.c" "/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/checker.dir/utils_2.c.o"
+  "/Users/cimogene/42/push_swap_working/utils_3.c" "/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/checker.dir/utils_3.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

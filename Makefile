@@ -15,13 +15,13 @@ NAME1 = checker
 NAME2 = push_swap
 
 SRC1 = instructions_1.c instructions_2.c \
-		checker.c stack_a_func.c \
-		stack_b_func.c utils_1.c utils_2.c \
+		utils_1.c utils_2.c utils_3.c \
+		push_swap_func.c checker.c \
 		checker_main.c
 
 SRC2 = instructions_1.c instructions_2.c \
-		checker.c stack_a_func.c \
-		stack_b_func.c utils_1.c utils_2.c \
+		checker.c push_swap_func.c \
+		utils_1.c utils_2.c utils_3.c \
 		push_swap_main.c
 
 OBJ1 = $(subst .c,.o,$(SRC1))

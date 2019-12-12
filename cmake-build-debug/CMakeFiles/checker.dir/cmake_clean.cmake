@@ -4,10 +4,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/checker.dir/instructions_1.c.o"
   "CMakeFiles/checker.dir/instructions_2.c.o"
   "CMakeFiles/checker.dir/libft/ft_lst_check_add_end.c.o"
-  "CMakeFiles/checker.dir/stack_a_func.c.o"
-  "CMakeFiles/checker.dir/stack_b_func.c.o"
+  "CMakeFiles/checker.dir/push_swap_func.c.o"
   "CMakeFiles/checker.dir/utils_1.c.o"
   "CMakeFiles/checker.dir/utils_2.c.o"
+  "CMakeFiles/checker.dir/utils_3.c.o"
   "checker"
   "checker.pdb"
 )

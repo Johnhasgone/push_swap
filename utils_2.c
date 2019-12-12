@@ -12,45 +12,6 @@
 
 #include "push_swap.h"
 
-int 		select_pivot(t_list *pivot, t_list *list, int iteration)
-{
-	int 	smaller;
-
-	smaller = 0;
-	while (list)
-	{
-		if (list->iter == iteration)
-		{
-			if (*list->content <= *pivot->content)
-				smaller++;
-		}
-		list = list->next;
-	}
-	return (smaller);
-}
-
-int			median_pivot(t_list *list, int iteration)
-{
-	t_list	*pivot;
-
-	pivot = list;
-	while (pivot)
-	{
-		if (count_iter_base(list, iteration) % 2 == 0)
-		{
-			if (count_iter_base(list, iteration) / 2 == select_pivot(pivot, list, iteration))
-				return (*pivot->content);
-		}
-		else if (count_iter_base(list, iteration) % 2 == 1)
-		{
-			if (count_iter_base(list, iteration) / 2 + 1 == select_pivot(pivot, list, iteration))
-				return (*pivot->content);
-		}
-		pivot = pivot->next;
-	}
-	return (0);
-}
-
 int			choose_rotation(t_list *list, int aver)
 {
 	int		r;
@@ -78,5 +39,42 @@ void		init_iter(t_list **list)
 	{
 		tmp->iter = 0;
 		tmp = tmp->next;
+	}
+}
+
+void		delete_list(t_list **list)
+{
+	if (!*list)
+		return ;
+	if ((*list)->next != NULL)
+		delete_list(&(*list)->next);
+	free((*list)->content);
+	free(*list);
+	*list = NULL;
+}
+
+void		sort_small_stack_a(t_list **list)
+{
+	if (count_all(*list) != 3)
+	{
+		if (*(*list)->content > *(*list)->next->content)
+			list_swap(list, 'a');
+		return ;
+	}
+	else
+	{
+		if (*(*list)->next->next->content < *(*list)->next->content)
+		{
+			if (*(*list)->next->content < *(*list)->content)
+				list_swap(list, 'a');
+			list_reverse_rotate(list, 'a');
+		}
+		if (*(*list)->content > *(*list)->next->content)
+		{
+			if (*(*list)->content < *(*list)->next->next->content)
+				list_swap(list, 'a');
+			else
+				list_rotate(list, 'a');
+		}
 	}
 }

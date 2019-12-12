@@ -1,4 +1,4 @@
-/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/checker.dir
-/Users/euvaganov/42/push_swap/cmake-build-debug/CMakeFiles/push_swap.dir
+/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/checker.dir
+/Users/cimogene/42/push_swap_working/cmake-build-debug/CMakeFiles/push_swap.dir

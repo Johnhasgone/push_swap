@@ -22,7 +22,7 @@ typedef struct		s_list
 {
 	int				*content;
 	size_t			content_size;
-	int 			iter;
+	int				iter;
 	struct s_list	*next;
 }					t_list;
 
@@ -89,6 +89,7 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 int					ft_countrows(char const *s, char c);
 int					ft_lst_check_add_end(t_list **alst, t_list *new);
+char				**ft_delmap(char **str, int i);
 
 size_t				ft_strlen_p(const char *s);
 void				ft_lstadd_end(t_list **alst, t_list *new);
