@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_delmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 20:26:49 by cimogene          #+#    #+#             */
-/*   Updated: 2019/09/11 20:55:02 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/06 13:28:29 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/06 13:42:39 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
-void		ft_lstadd_end(t_list **alst, t_list *new)
+char		**ft_delmap(char **str, int i)
 {
-	t_list	*elem;
-
-	if (new == NULL)
-		return ;
-	elem = *alst;
-	if (elem == NULL)
+	while (i >= 0)
 	{
-		*alst = new;
+		free(str[i]);
+		str[i] = NULL;
+		i--;
 	}
-	else
-	{
-		while (elem->next)
-			elem = elem->next;
-		elem->next = new;
-	}
+	free(str);
+	str = NULL;
+	return (str);
 }

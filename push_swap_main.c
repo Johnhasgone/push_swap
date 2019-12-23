@@ -24,13 +24,7 @@ int			main(int argc, char **argv)
 	if (array_to_list(argc, argv, &list_a) == 0)
 		write(2, "Error\n", 6);
 	else
-	{
-		while (!sort_check(list_a) || list_b)
-		{
-			push_swap_a(&list_a, &list_b);
-			push_swap_b(&list_b, &list_a);
-		}
-	}
+		push_swap_quick_sort(&list_a, &list_b);
 	delete_list(&list_a);
 	delete_list(&list_b);
 	return (0);

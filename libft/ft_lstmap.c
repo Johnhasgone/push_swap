@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-static t_list	*ft_delmap(t_list *lst)
+static t_list	*ft_delmaplist(t_list *lst)
 {
 	t_list		*del;
 
@@ -42,7 +42,7 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 	while (lst)
 	{
 		if (!(new_lst = (t_list*)malloc(sizeof(t_list))))
-			return (ft_delmap(start));
+			return (ft_delmaplist(start));
 		*new_lst = *(f(lst));
 		ft_lstadd_end(&start, new_lst);
 		lst = lst->next;

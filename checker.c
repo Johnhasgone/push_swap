@@ -6,7 +6,7 @@
 /*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/27 19:14:27 by cimogene          #+#    #+#             */
-/*   Updated: 2019/11/27 19:14:29 by cimogene         ###   ########.fr       */
+/*   Updated: 2019/12/16 14:31:39 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,42 +29,63 @@ int			int_check(char *str)
 	}
 	if ((num = ft_atoi(str)) < 0)
 		num *= -1;
-	if (num % 10 != str[i - 1] - '0')
+	if (num < 0 || (num == 0 && ft_strlen(str) > 2)
+	|| (num == 1 && ft_strlen(str) > 2))
 		return (0);
+	while (num > 0)
+	{
+		if (num % 10 != str[--i] - '0')
+			return (0);
+		num /= 10;
+	}
+	return (1);
+}
+
+int			add_to_list(int i, int count, char **args, t_list **list)
+{
+	int		*num;
+
+	if (args[0] == 0)
+		return (0);
+	while (i < count)
+	{
+		if (int_check(args[i]) == 0)
+			return (0);
+		num = (int*)malloc(sizeof(int));
+		*num = ft_atoi(args[i++]);
+		if (!(ft_lst_check_add_end(list, ft_lstnew(num, 4))))
+			return (0);
+	}
 	return (1);
 }
 
 int			array_to_list(int argc, char **argv, t_list **list)
 {
+	char	**args;
+	int		count;
 	int		i;
-	int		*num;
 
-	i = 1;
-	while (i < argc)
+	if (argc == 2)
 	{
-		if (int_check(argv[i]) == 0)
-			return (0);
-		else
-		{
-			num = (int*)malloc(sizeof(int));
-			*num = ft_atoi(argv[i]);
-			if (!(ft_lst_check_add_end(list, ft_lstnew(num, 4))))
-				return (0);
-			i++;
-		}
+		args = ft_strsplit(argv[1], ' ');
+		i = 0;
+		count = ft_countrows(argv[1], ' ');
 	}
+	else
+	{
+		i = 1;
+		args = argv;
+		count = argc;
+	}
+	if (!add_to_list(i, count, args, list))
+	{
+		if (argc == 2)
+			ft_delmap(args, count);
+		return (0);
+	}
+	if (argc == 2)
+		ft_delmap(args, count);
 	return (1);
-}
-
-void		delete_list(t_list **list)
-{
-	if (!*list)
-		return ;
-	if ((*list)->next != NULL)
-		delete_list(&(*list)->next);
-	free((*list)->content);
-	free(*list);
-	*list = NULL;
 }
 
 int			sort_list(t_list **list_a, t_list **list_b, char *line)

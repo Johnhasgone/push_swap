@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_countrows.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cimogene <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/11 20:26:49 by cimogene          #+#    #+#             */
-/*   Updated: 2019/09/11 20:55:02 by cimogene         ###   ########.fr       */
+/*   Created: 2019/09/05 14:23:42 by cimogene          #+#    #+#             */
+/*   Updated: 2019/09/23 17:43:56 by cimogene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-void		ft_lstadd_end(t_list **alst, t_list *new)
+int		ft_countrows(char const *s, char c)
 {
-	t_list	*elem;
+	int			i;
+	int			rows;
 
-	if (new == NULL)
-		return ;
-	elem = *alst;
-	if (elem == NULL)
+	i = 0;
+	rows = 0;
+	if (!s)
+		return (0);
+	while (s[i] != '\0')
 	{
-		*alst = new;
+		while (s[i] == c)
+			i++;
+		if (s[i] != c && s[i] != '\0')
+			rows++;
+		while (s[i] != c && s[i] != '\0')
+			i++;
 	}
-	else
-	{
-		while (elem->next)
-			elem = elem->next;
-		elem->next = new;
-	}
+	return (rows);
 }
