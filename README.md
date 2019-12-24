@@ -73,10 +73,10 @@ What the algo does:
 5. steps 1-4 repeated until the stack b is empty and stack a is sorted.
 
 The speed of the algo (in number of commands):
-  5 numbers - less then 12 commands
-  10 numbers - less than 38 commands
-  100 numbers - about 700 commands
-  500 numbers - about 5400 commands
+- 5 numbers - less then 12 commands
+- 10 numbers - less than 38 commands
+- 100 numbers - about 700 commands
+- 500 numbers - about 5400 commands
 
   
   
